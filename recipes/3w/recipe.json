@@ -21,5 +21,22 @@
         "#subsector"
       ]
     }
+  },
+    {
+    "name": "Charts: Distinct count of values in value column by the aggregate column",
+    "description": "",
+    "type": "chart",
+    "ingredients": {
+      "aggregateFunctions": [
+        "distinct-count"
+      ],
+      "aggregateColumns": [
+        "#region"
+      ],
+      "valueColumns": [
+        "#adm1"
+      ]
+    }
   }
+
 ]
