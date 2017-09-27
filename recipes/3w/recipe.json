@@ -37,6 +37,31 @@
         "#adm1"
       ]
     }
+  },
+    {
+    "name": "Charts: Distinct count of values in value column by the aggregate column",
+    "description": "",
+    "type": "chart",
+    "ingredients": {
+      "aggregateFunctions": [
+        "distinct-count"
+      ],
+      "aggregateColumns": [
+        "#region",
+        "#country",
+        "#adm1",
+        "#adm2",
+        "#adm3",
+        "#adm4",
+        "#adm5",
+      ],
+      "valueColumns": [
+        "#org",
+        "#activity",
+        "#sector",
+        "#subsector"
+      ]
+    }
   }
 
 ]
