@@ -22,23 +22,7 @@
       ]
     }
   },
-    {
-    "name": "Charts: Distinct count of values in value column by the aggregate column",
-    "description": "",
-    "type": "chart",
-    "ingredients": {
-      "aggregateFunctions": [
-        "distinct-count"
-      ],
-      "aggregateColumns": [
-        "#region"
-      ],
-      "valueColumns": [
-        "#adm1"
-      ]
-    }
-  },
-    {
+  {
     "name": "Charts: Distinct count of values in value column by the aggregate column",
     "description": "",
     "type": "chart",
@@ -62,6 +46,41 @@
         "#subsector"
       ]
     }
+  },
+  {
+    "name": "Charts: Distinct count of values in value column by the aggregate column",
+    "description": "",
+    "type": "chart",
+    "ingredients": {
+      "aggregateFunctions": [
+        "distinct-count"
+      ],
+      "aggregateColumns": [
+        "#org"
+      ],
+      "valueColumns": [
+        "#activity",
+        "#sector",
+        "#subsector"
+      ]
+    }
+  },
+  {
+    "name": "Charts: Distinct count of values in value column by the aggregate column",
+    "description": "",
+    "type": "chart",
+    "ingredients": {
+      "aggregateFunctions": [
+        "distinct-count"
+      ],
+      "aggregateColumns": [
+        "#activity",
+        "#sector",
+        "#subsector"
+      ],
+      "valueColumns": [
+        "#org"
+      ]
+    }
   }
-
 ]
