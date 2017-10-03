@@ -1,0 +1,19 @@
+[
+  {
+    "name": "Charts: Sum/count items for a value column grouped by aggregate columns",
+    "description": "",
+    "type": "chart",
+    "ingredients": {
+      "aggregateFunctions": [
+        "sum"
+      ],
+      "aggregateColumns": [
+        "#date+year"
+      ],
+      "valueColumns": [
+        "#value+funding+required+usd",
+        "#value+funding+total+usd"
+      ]
+    }
+  }
+]
