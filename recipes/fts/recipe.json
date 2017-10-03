@@ -16,21 +16,5 @@
         "#value+funding+pct"
       ]
     }
-  },
-    {
-    "name": "Key Figures: Sum/count items for a value column",
-    "description": "",
-    "type": "key figure",
-    "ingredients": {
-      "aggregateFunctions": [
-        "sum"
-      ],
-      "aggregateColumns": [
-        "#date+year"
-      ],
-      "valueColumns": [
-        "#value+funding+pct"
-      ]
-    }
   }
 ]
