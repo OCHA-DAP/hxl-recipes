@@ -12,7 +12,8 @@
       ],
       "valueColumns": [
         "#value+funding+required+usd",
-        "#value+funding+total+usd"
+        "#value+funding+total+usd",
+        "#value+funding+pct"
       ]
     }
   },
