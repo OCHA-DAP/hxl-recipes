@@ -112,7 +112,6 @@ Fields [properties of a bite]
     * "**chart**" — display either a bar or pie chart, depending on the number of values to show.
     * "**key figure**" — display a single number (such as total people in need), optionally with units and description text.
     * "**timeseries**" — display the change in values over time.
-
   **aggregateFunctions**
     a `JSON <https://en.wikipedia.org/wiki/JSON>`_ array of functions to use to generate summary (aggregate) data from the original dataset. HDX Quick Charts will offer each of these to the user as a separate option. The following functions are available:
       * "**count**" — display the total number of times each unique value appears (e.g. the number of activities for each prefecture in a 3W) - number of rows in the file for the specified criteria
