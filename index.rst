@@ -106,7 +106,7 @@ Fields [properties of a bite]
 
 * **type**
     the type of visualisation to generate. The options include the following:
-        * "**chart**" — display either a bar or pie chart, depending on the number of values to show.
+        * | "**chart**" — display either a bar or pie chart, depending on the number of values to show.
         * "**key figure**" — display a single number (such as total people in need), optionally with units and description text.
         * "**timeseries**" — display the change in values over time.
 
