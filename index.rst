@@ -133,11 +133,11 @@ How widgets are created
 The “Quick Charts” engine checks for each bite in the recipe in the columns (aggregated or value) and compares with the files’ HXL tags. From all the HXL tags in the file, the engine keeps only the one specified in the bite and builds all the available options. The “Quick Charts” engine cooks and delivers more than 1 bite with 2 inputs: recipe (HDX or external) and data (ingredients).
 
 Each visualization/widget can be of 3 types:
- **Chart**
+**Chart**
     It displays either a bar or pie chart, depending on the number of values to show. If there are no more than 4, the engine will draw a pie chart.
- **Key figure**
+**Key figure**
     It displays a single number (such as total people in need), optionally with units, prefix, postfix  and description text.
- **Timeseries**
+**Timeseries**
     It displays the change in values over time.
 
 Create your own recipe
