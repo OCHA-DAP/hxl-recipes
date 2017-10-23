@@ -6,7 +6,7 @@ Recipes
 
 Definition
 ^^^^^^^^^^
-	`HDX <https://data.humdata.org/>`_ Quick Charts use `JSON <https://en.wikipedia.org/wiki/JSON>`_ configuration files to define different kinds of charts to offer to users. Each configuration file is a recipe consisting of a list of bites, individual blueprints for making charts from `HXL-tagged data <http://hxlstandard.org/>`_.
+`HDX <https://data.humdata.org/>`_ Quick Charts use `JSON <https://en.wikipedia.org/wiki/JSON>`_ configuration files to define different kinds of charts to offer to users. Each configuration file is a recipe consisting of a list of bites, individual blueprints for making charts from `HXL-tagged data <http://hxlstandard.org/>`_.
 
 Terminology
 ^^^^^^^^^^^
@@ -24,7 +24,7 @@ Terminology
 
 Structure
 ^^^^^^^^^
-	The `JSON <https://en.wikipedia.org/wiki/JSON>`_ config file is more a bite generator, this means that we can specify more than one aggregated function. We could do a json bite definition for each aggregate function (count, distinct-count or sum), but it is easier/simpler to put all of them there and let the system compute all possibilities. In specific cases (e.g 3w, HNOs, FTS) the recipe could be very simple in order to generate a limited number of bites tailored to each file type.
+The `JSON <https://en.wikipedia.org/wiki/JSON>`_ config file is more a bite generator, this means that we can specify more than one aggregated function. We could do a json bite definition for each aggregate function (count, distinct-count or sum), but it is easier/simpler to put all of them there and let the system compute all possibilities. In specific cases (e.g 3w, HNOs, FTS) the recipe could be very simple in order to generate a limited number of bites tailored to each file type.
 
 Recipe Example
 ^^^^^^^^^^^^^^
