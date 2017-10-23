@@ -5,11 +5,11 @@ Recipes
 -------
 
 Definition
-^^^^^^^^^^
+----------
 `HDX <https://data.humdata.org/>`_ Quick Charts use `JSON <https://en.wikipedia.org/wiki/JSON>`_ configuration files to define different kinds of charts to offer to users. Each configuration file is a recipe consisting of a list of bites, individual blueprints for making charts from `HXL-tagged data <http://hxlstandard.org/>`_.
 
 Terminology
-^^^^^^^^^^^
+-----------
 +----------------+----------------------------------------------------------------------------------------------------------------------+
 | Term           | Definition                                                                                                           |
 +================+======================================================================================================================+
@@ -23,11 +23,11 @@ Terminology
 +----------------+----------------------------------------------------------------------------------------------------------------------+
 
 Structure
-^^^^^^^^^
+---------
 The `JSON <https://en.wikipedia.org/wiki/JSON>`_ config file is more a bite generator, this means that we can specify more than one aggregated function. We could do a json bite definition for each aggregate function (count, distinct-count or sum), but it is easier/simpler to put all of them there and let the system compute all possibilities. In specific cases (e.g 3w, HNOs, FTS) the recipe could be very simple in order to generate a limited number of bites tailored to each file type.
 
 Recipe Example
-^^^^^^^^^^^^^^
+--------------
 Here is an example of a recipe (json) - list of bites(dictionaries):
 
 .. code-block:: json
@@ -39,7 +39,7 @@ Here is an example of a recipe (json) - list of bites(dictionaries):
  ]
 
 Simple Bite Example
-^^^^^^^^^^^^^^^^^^^
+-------------------
 Here is an example of a simple bite to display a chart showing the total affected people grouped by country in a dataset:
 
 .. code-block:: json
@@ -63,7 +63,7 @@ Here is an example of a simple bite to display a chart showing the total affecte
  }
 
 Bite Example
-^^^^^^^^^^^^
+------------
 Here is an example of a more complex bite to display a chart showing the total affected/inneed/reached/targeted/individuals people grouped by administrative divisions of a country in a dataset:
 
 .. code-block:: json
@@ -97,7 +97,7 @@ Here is an example of a more complex bite to display a chart showing the total a
  }
 
 Fields [properties of a bite]
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------
 **name**
     a short, generic description of the visualisation. Not currently in use, but will be used in menu item selection
 
@@ -126,7 +126,7 @@ Fields [properties of a bite]
         the columns to visualise. The value is a `JSON <https://en.wikipedia.org/wiki/JSON>`_ array of HXL `tag patterns <https://github.com/HXLStandard/hxl-proxy/wiki/Tag-patterns>`_ used to match actual hashtags in the document, e.g. "[#affected", "#inneed"].
 
 How widgets are created
-^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------
 The “Quick Charts” engine checks for each bite in the recipe in the columns (aggregated or value) and compares with the files’ HXL tags. From all the HXL tags in the file, the engine keeps only the one specified in the bite and builds all the available options. The “Quick Charts” engine cooks and delivers more than 1 bite with 2 inputs: recipe (HDX or external) and data (ingredients).
 
 Each visualization/widget can be of 3 types:
@@ -138,7 +138,8 @@ Each visualization/widget can be of 3 types:
 		It displays the change in values over time.
 
 Create your own recipe
-^^^^^^^^^^^^^^^^^^^^^^
+----------------------
+
 Users can build their own recipes using specific columns and starting from `HDX recipes <https://github.com/OCHA-DAP/hxl-recipes>`_ that are hosted on GitHub and they should keep in mind that there a several restrictions:
 	* There are three(3) types of charts that are supported (bar/pie chart, timeseries, key figure)
 	* There are three (3) function that are supported to aggregate the values: count, distinct-count, sum
@@ -146,8 +147,10 @@ Users can build their own recipes using specific columns and starting from `HDX 
 Note. Users can use any column as aggregate or value types, but testing is required.
 After creating the recipe, it needs to be stored on an public URL (unrestricted access) and to be added at end of the quick charts url. See next session how to use it.
 
+
 How to use
-^^^^^^^^^^
+----------
+
 When calling a Quick Chart you could use the HDX default recipe or specify it via “recipeUrl” parameter.
 This is an example of use:
 
