@@ -117,6 +117,7 @@ Fields [properties of a bite]
         * "**timeseries**" — display the change in values over time.
     **aggregateFunctions**
         a `JSON <https://en.wikipedia.org/wiki/JSON>`_ array of functions to use to generate summary (aggregate) data from the original dataset. HDX Quick Charts will offer each of these to the user as a separate option. The following functions are available:
+
         * "**count**" — display the total number of times each unique value appears (e.g. the number of activities for each prefecture in a 3W) - number of rows in the file for the specified criteria
         * "**distinct-count**" — display the total number of unique values in a column listed in value-columns associated with each unique value in a column listed in aggregate-columns (e.g. the number of unique provinces in each country).
         * "**sum**" — add up figures in a column listed in value-columns for each unique value in a column listed in aggregate-columns (e.g. the total number of people in need in each country).
