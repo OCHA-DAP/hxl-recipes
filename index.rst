@@ -98,13 +98,13 @@ Here is an example of a more complex bite to display a chart showing the total a
 
 Fields [properties of a bite]
 -----------------------------
-**name**
+* **name**
     a short, generic description of the visualisation. Not currently in use, but will be used in menu item selection
 
-**description**
+* **description**
     a longer, human-readable description of the visualisation. Not currently in use, but will be used in notes
 
-**type**
+* **type**
     the type of visualisation to generate. The options include the following:
         * "**chart**" — display either a bar or pie chart, depending on the number of values to show.
         * "**key figure**" — display a single number (such as total people in need), optionally with units and description text.
