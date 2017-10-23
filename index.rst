@@ -100,25 +100,32 @@ Fields [properties of a bite]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 **name**
   a short, generic description of the visualisation. Not currently in use, but will be used in menu item selection
+
 **description**
   a longer, human-readable description of the visualisation. Not currently in use, but will be used in notes
+
 **type**
   the type of visualisation to generate. The options include the following:
     * "**chart**" — display either a bar or pie chart, depending on the number of values to show.
     * "**key figure**" — display a single number (such as total people in need), optionally with units and description text.
     * "**timeseries**" — display the change in values over time.
+
 **ingredients**
+
   a `JSON <https://en.wikipedia.org/wiki/JSON>`_ object (dictionary) containing instructions for creating the visualisation. The object has the following properties:
     * "**chart**" — display either a bar or pie chart, depending on the number of values to show.
     * "**key figure**" — display a single number (such as total people in need), optionally with units and description text.
     * "**timeseries**" — display the change in values over time.
+
   **aggregateFunctions**
     a `JSON <https://en.wikipedia.org/wiki/JSON>`_ array of functions to use to generate summary (aggregate) data from the original dataset. HDX Quick Charts will offer each of these to the user as a separate option. The following functions are available:
       * "**count**" — display the total number of times each unique value appears (e.g. the number of activities for each prefecture in a 3W) - number of rows in the file for the specified criteria
       * "**distinct-count**" — display the total number of unique values in a column listed in value-columns associated with each unique value in a column listed in aggregate-columns (e.g. the number of unique provinces in each country).
       * "**sum**" — add up figures in a column listed in value-columns for each unique value in a column listed in aggregate-columns (e.g. the total number of people in need in each country).
+
   **aggregateColumns**
     the columns that can be used to group the results (any given chart will use just one of the columns). The value is a `JSON <https://en.wikipedia.org/wiki/JSON>`_ array of HXL `tag patterns <https://github.com/HXLStandard/hxl-proxy/wiki/Tag-patterns>`_ used to match actual hashtags in the document, e.g. "[#adm1", "#adm2"]. When this property is missing, or no columns match the `tag patterns <https://github.com/HXLStandard/hxl-proxy/wiki/Tag-patterns>`_, the aggregate function will use the entire document without grouping the results.
+
   **valueColumns** (required)
     the columns to visualise. The value is a `JSON <https://en.wikipedia.org/wiki/JSON>`_ array of HXL `tag patterns <https://github.com/HXLStandard/hxl-proxy/wiki/Tag-patterns>`_ used to match actual hashtags in the document, e.g. "[#affected", "#inneed"].
 
