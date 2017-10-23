@@ -130,19 +130,19 @@ How widgets are created
 The “Quick Charts” engine checks for each bite in the recipe in the columns (aggregated or value) and compares with the files’ HXL tags. From all the HXL tags in the file, the engine keeps only the one specified in the bite and builds all the available options. The “Quick Charts” engine cooks and delivers more than 1 bite with 2 inputs: recipe (HDX or external) and data (ingredients).
 
 Each visualization/widget can be of 3 types:
-    **Chart**
-		It displays either a bar or pie chart, depending on the number of values to show. If there are no more than 4, the engine will draw a pie chart.
-    **Key figure**
-		It displays a single number (such as total people in need), optionally with units, prefix, postfix  and description text.
-    **Timeseries**
-		It displays the change in values over time.
+**Chart**
+    It displays either a bar or pie chart, depending on the number of values to show. If there are no more than 4, the engine will draw a pie chart.
+**Key figure**
+    It displays a single number (such as total people in need), optionally with units, prefix, postfix  and description text.
+**Timeseries**
+    It displays the change in values over time.
 
 Create your own recipe
 ----------------------
 
 Users can build their own recipes using specific columns and starting from `HDX recipes <https://github.com/OCHA-DAP/hxl-recipes>`_ that are hosted on GitHub and they should keep in mind that there a several restrictions:
-	* There are three(3) types of charts that are supported (bar/pie chart, timeseries, key figure)
-	* There are three (3) function that are supported to aggregate the values: count, distinct-count, sum
+* There are three(3) types of charts that are supported (bar/pie chart, timeseries, key figure)
+* There are three (3) function that are supported to aggregate the values: count, distinct-count, sum
 
 Note. Users can use any column as aggregate or value types, but testing is required.
 After creating the recipe, it needs to be stored on an public URL (unrestricted access) and to be added at end of the quick charts url. See next session how to use it.
