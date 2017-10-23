@@ -114,9 +114,9 @@ Fields [properties of a bite]
 **ingredients**
     a `JSON <https://en.wikipedia.org/wiki/JSON>`_ object (dictionary) containing instructions for creating the visualisation. The object has the following properties:
 
-        * "**chart**" — display either a bar or pie chart, depending on the number of values to show.
-        * "**key figure**" — display a single number (such as total people in need), optionally with units and description text.
-        * "**timeseries**" — display the change in values over time.
+    * "**chart**" — display either a bar or pie chart, depending on the number of values to show.
+    * "**key figure**" — display a single number (such as total people in need), optionally with units and description text.
+    * "**timeseries**" — display the change in values over time.
     **aggregateFunctions**
         a `JSON <https://en.wikipedia.org/wiki/JSON>`_ array of functions to use to generate summary (aggregate) data from the original dataset. HDX Quick Charts will offer each of these to the user as a separate option. The following functions are available:
 
