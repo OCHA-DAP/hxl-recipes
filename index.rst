@@ -162,7 +162,7 @@ This is an example of use:
 	`https://github.com/OCHA-DAP/hxl-recipes/blob/master/recipes/3w/recipe.json <https://github.com/OCHA-DAP/hxl-recipes/blob/master/recipes/3w/recipe.json>`_
 
 **Charts with 3w recipe**
-https://data.humdata.org/hxlpreview/show;url=http%3A%2F%2Fdata.humdata.org%2Fdataset%2Fd7ab89e4-bcb2-4127-be3c-5e8cf804ffd3%2Fresource%2F1ac80d41-4fd0-4f65-8f04-2cd98f4c09b1%2Fdownload%2Fmali_3wop_juin-2017.xls;**recipeUrl=https%3A%2F%2Fraw.githubusercontent.com%2FOCHA-DAP%2Fhxl-recipes%2Fmaster%2Frecipes%2F3w%2Frecipe.json**
+    https://data.humdata.org/hxlpreview/show;url=http%3A%2F%2Fdata.humdata.org%2Fdataset%2Fd7ab89e4-bcb2-4127-be3c-5e8cf804ffd3%2Fresource%2F1ac80d41-4fd0-4f65-8f04-2cd98f4c09b1%2Fdownload%2Fmali_3wop_juin-2017.xls;**recipeUrl=https%3A%2F%2Fraw.githubusercontent.com%2FOCHA-DAP%2Fhxl-recipes%2Fmaster%2Frecipes%2F3w%2Frecipe.json**
 
 or link `here <https://data.humdata.org/hxlpreview/show;url=http%3A%2F%2Fdata.humdata.org%2Fdataset%2Fd7ab89e4-bcb2-4127-be3c-5e8cf804ffd3%2Fresource%2F1ac80d41-4fd0-4f65-8f04-2cd98f4c09b1%2Fdownload%2Fmali_3wop_juin-2017.xls;recipeUrl=https%3A%2F%2Fraw.githubusercontent.com%2FOCHA-DAP%2Fhxl-recipes%2Fmaster%2Frecipes%2F3w%2Frecipe.json>`_
 
