@@ -28,22 +28,16 @@ The `JSON <https://en.wikipedia.org/wiki/JSON>`_ config file is more a bite gene
 
 Recipe Example
 --------------
-Here is an example of a recipe (json) - list of bites(dictionaries):
-
-.. code-block:: json
-    :linenos:
+Here is an example of a recipe (json) - list of bites(dictionaries)::
 
  [
-  {"name": "this is the first bite"},
-  {"name": "this is the second bite"}
+   {"name": "this is the first bite"},
+   {"name": "this is the second bite"}
  ]
 
 Simple Bite Example
 -------------------
-Here is an example of a simple bite to display a chart showing the total affected people grouped by country in a dataset:
-
-.. code-block:: json
-    :linenos:
+Here is an example of a simple bite to display a chart showing the total affected people grouped by country in a dataset::
 
  {
   "name": "Charts: Sum/count items for a value column grouped by aggregate columns",
@@ -64,10 +58,7 @@ Here is an example of a simple bite to display a chart showing the total affecte
 
 Bite Example
 ------------
-Here is an example of a more complex bite to display a chart showing the total affected/inneed/reached/targeted/individuals people grouped by administrative divisions of a country in a dataset:
-
-.. code-block:: json
-    :linenos:
+Here is an example of a more complex bite to display a chart showing the total affected/inneed/reached/targeted/individuals people grouped by administrative divisions of a country in a dataset::
 
  {
   "name": "Charts: Sum/count items for a value column grouped by aggregate columns",
