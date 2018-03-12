@@ -11,9 +11,7 @@
       "filtersWith":[
         {"#date+year": "$MAX$"}
       ],
-      "aggregateColumns": [
-        "#sector+name"
-      ],
+
       "valueColumns": [
         "#value+funding+total+usd / #value+funding+required+usd"
       ]
