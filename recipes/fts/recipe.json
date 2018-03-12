@@ -12,7 +12,7 @@
         {"#date+year": "$MAX$"}
       ],
       "aggregateColumns": [
-        "#date+year"
+        "#sector+name"
       ],
       "valueColumns": [
         "#value+funding+total+usd / #value+funding+required+usd"
