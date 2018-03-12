@@ -1,7 +1,65 @@
 [
   {
+    "name": "percentage of funding received by sector for latest year",
+    "title": "Percentage of funding received by sector for latest year",
+    "description": "Percentage of actual disbursements for all sectors in the latest year ",
+    "type": "comparison-chart",
+    "ingredients": {
+      "aggregateFunctions": [
+        "sum"
+      ],
+      "filtersWith":[
+        {"#date+year": "$MAX$"}
+      ],
+      "aggregateColumns": [
+        "#date+year"
+      ],
+      "valueColumns": [
+        "#value+funding+total+usd / #value+funding+required+usd"
+      ]
+    }
+  },
+  {
+    "name": "percentage of funding per sector for latest year",
+    "description": "percentage of funding per sector for latest year",
+    "title": "Percentage of funding per sector for latest year",
+    "type": "chart",
+    "ingredients": {
+      "aggregateFunctions": [
+        "sum"
+      ],
+      "filtersWith":[
+        {"#date+year": "$MAX$"}
+      ],
+      "aggregateColumns": [
+        "#sector+name"
+      ],
+      "valueColumns": [
+        "#value+funding+pct"
+      ]
+    }
+  },
+  {
+    "name": "percentage of funding received vs. required.",
+    "title": "Percentage of funding received vs. required.",
+    "description": "percentage of actual disbursements for sectors in the latest year ",
+    "type": "comparison-chart",
+    "ingredients": {
+      "aggregateFunctions": [
+        "sum"
+      ],
+      "aggregateColumns": [
+        "#date+year"
+      ],
+      "valueColumns": [
+        "#value+funding+total+usd / #value+funding+required+usd"
+      ]
+    }
+  },
+  {
     "name": "Charts: Sum/count items for a value column grouped by aggregate columns",
-    "description": "",
+    "description": "this was version 1.0",
+    "title": "",
     "type": "chart",
     "ingredients": {
       "aggregateFunctions": [
