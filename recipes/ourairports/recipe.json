@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Total number of airports",
+    "description": "",
+    "type": "key figure",
+    "ingredients": {
+      "aggregateFunctions": [
+        "count"
+      ],
+      "valueColumns": [
+        "#meta+code"
+      ]
+    }
+  },
+  {
+    "name": "Number of airports by adm1 (count)",
+    "title": "Number of airports by adm1 (count)",
+    "description": "Number of airports by adm1 (count)",
+    "type": "chart",
+    "ingredients": {
+      "aggregateFunctions": [
+        "count"
+      ],
+      "aggregateColumns": [
+        "#adm1+code+iso"
+      ],
+      "valueColumns": [
+        "#meta+code"
+      ]
+    }
+  },
+  {
+    "name": "Number of airports by adm1 (sum)",
+    "title": "Number of airports by adm1 (sum)",
+    "description": "Number of airports by adm1 (sum)",
+    "type": "chart",
+    "ingredients": {
+      "aggregateFunctions": [
+        "sum"
+      ],
+      "aggregateColumns": [
+        "#adm1+code+iso"
+      ],
+      "valueColumns": [
+        "#meta+code"
+      ]
+    }
+  },
+  {
+    "name": "Number of airports by adm1 (count)",
+    "title": "Number of airports by adm1 (count)",
+    "description": "Number of airports by adm1 (count)",
+    "type": "chart",
+    "ingredients": {
+      "aggregateFunctions": [
+        "count"
+      ],
+      "aggregateColumns": [
+        "#adm1+code+iso"
+      ],
+      "valueColumns": [
+        "#loc+airport+code"
+      ]
+    }
+  }
+]
