@@ -8,6 +8,9 @@
         "aggregateFunctions": [
           "sum"
         ],
+        "aggregateColumns": [
+          "#sector+name"
+        ],
         "filtersWith": [
           {
             "#date+year": "$MAX$"
