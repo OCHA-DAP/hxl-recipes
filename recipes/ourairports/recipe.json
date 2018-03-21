@@ -1,22 +1,8 @@
 [
   {
-    "name": "Total number of airports",
-    "title": "Total number of airports",
-    "description": "Total number of airports in country",
-    "type": "key figure",
-    "ingredients": {
-      "aggregateFunctions": [
-        "count"
-      ],
-      "valueColumns": [
-        "#meta+code"
-      ]
-    }
-  },
-  {
-    "name": "Number of airports by adm1 (count)",
-    "title": "Number of airports by adm1 (count)",
-    "description": "Number of airports by adm1 (count)",
+    "name": "Number of airports by region",
+    "title": "Number of airports by region",
+    "description": "The total number of airports in each region",
     "type": "chart",
     "ingredients": {
       "aggregateFunctions": [
@@ -31,9 +17,24 @@
     }
   },
   {
-    "name": "Number of airports by type (count)",
-    "title": "Number of airports by type (count)",
-    "description": "Number of airports by type (count)",
+    "name": "Total number of airports",
+    "title": "Total number of airports",
+    "description": "The total number of airports in country",
+    "type": "key figure",
+    "ingredients": {
+      "aggregateFunctions": [
+        "count"
+      ],
+      "valueColumns": [
+        "#meta+code"
+      ]
+    }
+  },
+
+  {
+    "name": "Number of airports by type",
+    "title": "Number of airports by type",
+    "description": "The total number of airports by each type",
     "type": "chart",
     "ingredients": {
       "aggregateFunctions": [
