@@ -46,22 +46,5 @@
         "#country+code+iso2"
       ]
     }
-  },
-  {
-    "name": "Number of airports by type (distinct-count)",
-    "title": "Number of airports by type (distinct-count)",
-    "description": "Number of airports by type (distinct-count)",
-    "type": "chart",
-    "ingredients": {
-      "aggregateFunctions": [
-        "distinct-count"
-      ],
-      "aggregateColumns": [
-        "#country+code+iso2"
-      ],
-      "valueColumns": [
-        "#loc+airport+type"
-      ]
-    }
   }
 ]
