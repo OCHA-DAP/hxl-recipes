@@ -31,33 +31,33 @@
     }
   },
   {
-    "name": "Number of airports by adm1 (sum)",
-    "title": "Number of airports by adm1 (sum)",
-    "description": "Number of airports by adm1 (sum)",
-    "type": "chart",
-    "ingredients": {
-      "aggregateFunctions": [
-        "distinct-count"
-      ],
-      "aggregateColumns": [
-        "#adm1+code+iso"
-      ],
-      "valueColumns": [
-        "#meta+code"
-      ]
-    }
-  },
-  {
-    "name": "Number of airports by adm1 and loc-code (count)",
-    "title": "Number of airports by adm1 and loc-code(count)",
-    "description": "Number of airports by adm1 and loc-code (count)",
+    "name": "Number of airports by type (count)",
+    "title": "Number of airports by type (count)",
+    "description": "Number of airports by type (count)",
     "type": "chart",
     "ingredients": {
       "aggregateFunctions": [
         "count"
       ],
       "aggregateColumns": [
-        "#adm1+code+iso"
+        "#country+code+iso2"
+      ],
+      "valueColumns": [
+        "#loc+airport+code"
+      ]
+    }
+  },
+  {
+    "name": "Number of airports by type (distinct-count)",
+    "title": "Number of airports by type (distinct-count)",
+    "description": "Number of airports by type (distinct-count)",
+    "type": "chart",
+    "ingredients": {
+      "aggregateFunctions": [
+        "distinct-count"
+      ],
+      "aggregateColumns": [
+        "#country+code+iso2"
       ],
       "valueColumns": [
         "#loc+airport+code"
