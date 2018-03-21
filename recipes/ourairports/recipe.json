@@ -43,7 +43,7 @@
         "#country+code+iso2"
       ],
       "valueColumns": [
-        "#loc+airport+code"
+        "#loc+airport+type"
       ]
     }
   },
@@ -60,7 +60,7 @@
         "#country+code+iso2"
       ],
       "valueColumns": [
-        "#loc+airport+code"
+        "#loc+airport+type"
       ]
     }
   }
