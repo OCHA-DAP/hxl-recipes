@@ -40,10 +40,10 @@
         "count"
       ],
       "aggregateColumns": [
-        "#country+code+iso2"
+        "#loc+airport+type"
       ],
       "valueColumns": [
-        "#loc+airport+type"
+        "#country+code+iso2"
       ]
     }
   },
