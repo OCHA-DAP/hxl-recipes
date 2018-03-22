@@ -1,10 +1,11 @@
 {
-  "name":"fts",
+  "name": "fts",
   "title": "Financial tracking information",
-  "type":"cookbook",
+  "type": "cookbook",
   "columns": [
     "#value+funding+total+usd",
     "#value+funding+required+usd",
+    "#value+funding+pct",
     "#date+year"
   ],
   "recipes": [
@@ -25,7 +26,6 @@
             "#date+year": "$MAX$"
           }
         ],
-
         "valueColumns": [
           "#value+funding+pct"
         ]
@@ -50,7 +50,6 @@
         ]
       }
     },
-
     {
       "name": "Requirements and Funding by Year",
       "title": "Requirements and Funding by Year",
@@ -91,5 +90,4 @@
       }
     }
   ]
-
 }

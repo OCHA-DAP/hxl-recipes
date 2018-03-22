@@ -1,39 +1,51 @@
-[
-  {
-    "name": "Charts: Sum/count items for a value column grouped by aggregate columns",
-    "description": "",
-    "type": "chart",
-    "ingredients": {
-      "aggregateFunctions": [
-        "sum"
-      ],
-      "aggregateColumns": [
-        "#region",
-        "#country",
-        "#adm1",
-        "#adm2",
-        "#adm3",
-        "#adm4",
-        "#adm5"
-      ],
-      "valueColumns": [
-        "#affected",
-        "#inneed"
-      ]
+{
+  "name": "hno",
+  "title": "HNO Information",
+  "type": "cookbook",
+  "columns": [
+    "#affected",
+    "#inneed",
+    "#region",
+    "#country",
+    "#adm1"
+  ],
+  "recipes": [
+    {
+      "name": "Charts: Sum/count items for a value column grouped by aggregate columns",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#region",
+          "#country",
+          "#adm1",
+          "#adm2",
+          "#adm3",
+          "#adm4",
+          "#adm5"
+        ],
+        "valueColumns": [
+          "#affected",
+          "#inneed"
+        ]
+      }
+    },
+    {
+      "name": "Key Figures: Sum items for a value column",
+      "description": "",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "valueColumns": [
+          "#affected",
+          "#inneed"
+        ]
+      }
     }
-  },
-  {
-    "name": "Key Figures: Sum items for a value column",
-    "description": "",
-    "type": "key figure",
-    "ingredients": {
-      "aggregateFunctions": [
-        "sum"
-      ],
-      "valueColumns": [
-        "#affected",
-        "#inneed"
-      ]
-    }
-  }
-]
+  ]
+}
