@@ -7,7 +7,7 @@ python:
 #   global:
 #     - DOCKER_COMPOSE_VERSION=1.19.0
 install:
-  - ls -l ../recipes/*json
+  - ls -l recipes/*json
 
 script:
   - pytest
