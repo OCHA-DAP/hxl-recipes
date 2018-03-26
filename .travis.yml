@@ -1,0 +1,23 @@
+dist: trusty
+language: python
+python:
+- '3.6'
+install:
+- ls -l recipes/*json
+script:
+- cd run
+- python3 run.py
+- cp index.html ../recipes/
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local-dir: recipes
+  keep-history: true
+  verbose: true
+  target-branch: gh-pages
+  on:
+    branch:
+      - dev-cookbooks-travis
+      - master
+
