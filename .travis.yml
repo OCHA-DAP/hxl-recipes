@@ -1,11 +1,14 @@
 dist: trusty
-sudo: required
+language: python
+python:
+  - "3.6"
 
-env:
-  global:
-    - DOCKER_COMPOSE_VERSION=1.19.0
+# env:
+#   global:
+#     - DOCKER_COMPOSE_VERSION=1.19.0
 
 script:
+  - pytest
   - cd run
   - ls -l ../recipes/*json
   - python3 run.py
