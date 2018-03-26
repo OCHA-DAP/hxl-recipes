@@ -10,7 +10,6 @@ install:
   - ls -l recipes/*json
 
 script:
-  - pytest
   - cd run
   - ls -l ../recipes/*json
   - python3 run.py
