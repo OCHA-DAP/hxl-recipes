@@ -8,5 +8,5 @@ env:
 script:
   - cd run
   - ls -l ../recipes/*json
-  - python run.py
+  - python3 run.py
   - ls -l ../recipes/*json
