@@ -1,0 +1,12 @@
+dist: trusty
+sudo: required
+
+env:
+  global:
+    - DOCKER_COMPOSE_VERSION=1.19.0
+
+script:
+  - cd run
+  - ls -l ../recipes/*json
+  - python run.py
+  - ls -l ../recipes/*json
