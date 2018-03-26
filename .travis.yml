@@ -19,5 +19,6 @@ deploy:
   on:
     branch:
       - dev-cookbooks-travis
+      - dev-cookbooks
       - master
 
