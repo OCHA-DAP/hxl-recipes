@@ -1,0 +1,76 @@
+[
+  {
+      "name": "Total population of concern by year",
+      "title": "Total population of concern by year",
+      "description": "Refugees, Internally displaced people, returned IDPs, Ayslum seekers, returned refugees",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#date+year"
+        ],
+        "valueColumns": [
+          "#affected+total"
+        ]
+      }
+    },
+    {
+      "name": "Total population of concern in the last year",
+      "title": "Total population of concern in the last year",
+      "description": "Refugees, Internally displaced people, returned IDPs, Ayslum seekers, returned refugees in the last year",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "filtersWith": [
+          {
+            "#date+year": "$MAX$"
+          }
+        ],
+        "aggregateColumns": [
+          "#date+year"
+        ],
+        "valueColumns": [
+          "#affected+total"
+        ]
+      }
+    },
+
+    {
+      "name": "Total population of concern for top countries of origin",
+      "title": "Total population of concern for top countries of origin",
+      "description": "top countries of origin for population of concern",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#country+origin"
+        ],
+        "valueColumns": [
+          "#affected+total"
+        ]
+      }
+    },
+    {
+      "name": "Total population of concern for top countries of origin",
+      "title": "Total population of concern for top countries of origin",
+      "description": "top countries of origin for population of concern",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#country+residence"
+        ],
+        "valueColumns": [
+          "#affected+total"
+        ]
+      }
+    }
+]
