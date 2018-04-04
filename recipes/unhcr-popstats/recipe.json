@@ -57,8 +57,8 @@
       }
     },
     {
-      "name": "Total population of concern for top countries of origin",
-      "title": "Total population of concern for top countries of origin",
+      "name": "Total population of concern for top countries of residence",
+      "title": "Total population of concern for top countries of residence",
       "description": "top countries of origin for population of concern",
       "type": "chart",
       "ingredients": {
