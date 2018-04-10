@@ -68,7 +68,7 @@
     },
     {
       "name": "Top host countries",
-      "title": "Total population of concern for top countries of residence",
+      "title": "Top host countries",
       "description": "Top most-common host countries",
       "type": "chart",
       "ingredients": {
