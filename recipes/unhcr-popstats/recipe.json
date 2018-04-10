@@ -40,9 +40,9 @@
     },
 
     {
-      "name": "Total population of concern for top countries of origin",
-      "title": "Total population of concern for top countries of origin",
-      "description": "top countries of origin for population of concern",
+      "name": "Top countries of origin",
+      "title": "Top countries of origin",
+      "description": "Top most-common countries of origin",
       "type": "chart",
       "ingredients": {
         "aggregateFunctions": [
@@ -57,9 +57,9 @@
       }
     },
     {
-      "name": "Total population of concern for top countries of residence",
+      "name": "Top host countries",
       "title": "Total population of concern for top countries of residence",
-      "description": "top countries of origin for population of concern",
+      "description": "Top most-common host countries",
       "type": "chart",
       "ingredients": {
         "aggregateFunctions": [
