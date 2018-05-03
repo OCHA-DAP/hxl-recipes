@@ -15,10 +15,7 @@ deploy:
   local-dir: recipes
   keep-history: true
   verbose: true
-  target-branch: gh-pages
+  target-branch: dev
   on:
     branch:
-      - dev-cookbooks-travis
-      - dev-cookbooks
-      - master
-
+      - dev
