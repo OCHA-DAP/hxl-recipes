@@ -1,7 +1,8 @@
 {
   "name": "hdx",
-  "title": "HDX - need refactor",
+  "title": "HDX",
   "type": "cookbook",
+  "default": true,
   "columns": [
     "#affected",
     "#inneed",
