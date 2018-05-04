@@ -15,7 +15,7 @@ deploy:
   local-dir: recipes
   keep-history: true
   verbose: true
-  target-branch: dev
+  target-branch: prod
   on:
     branch:
       - dev
