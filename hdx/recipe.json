@@ -1,6 +1,6 @@
 {
-  "name": "generic",
-  "title": "Generic",
+  "name": "hdx",
+  "title": "HDX",
   "type": "cookbook",
   "default": true,
   "columns": [
