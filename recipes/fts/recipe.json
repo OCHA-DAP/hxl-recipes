@@ -1,6 +1,6 @@
 {
   "name": "fts",
-  "title": "Financial tracking information",
+  "title": "Financial Tracking",
   "type": "cookbook",
   "columns": [
     "#value+funding+total+usd",
