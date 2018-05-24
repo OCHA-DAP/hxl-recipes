@@ -1,6 +1,6 @@
 {
   "name":"unhcr-popstats",
-  "title": "Population of concern (UNHCR)",
+  "title": "Persons of Concern",
   "type":"cookbook",
   "columns": [
     "#affected+total",
