@@ -1,6 +1,6 @@
 {
   "name": "ourairports",
-  "title": "Our Airports Information",
+  "title": "Our Airports",
   "type": "cookbook",
   "columns": [
     "#loc+airport+type",
