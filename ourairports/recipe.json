@@ -1,0 +1,61 @@
+{
+  "name": "ourairports",
+  "title": "Our Airports",
+  "type": "cookbook",
+  "columns": [
+    "#loc+airport+type",
+    "#country+code+iso2",
+    "#meta+code",
+    "#adm1+code+iso"
+  ],
+  "recipes": [
+    {
+      "name": "Number of airports by region",
+      "title": "Number of airports by region",
+      "description": "The total number of airports in each region",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "count"
+        ],
+        "aggregateColumns": [
+          "#adm1+code+iso"
+        ],
+        "valueColumns": [
+          "#meta+code"
+        ]
+      }
+    },
+    {
+      "name": "Total number of airports",
+      "title": "Total number of airports",
+      "description": "The total number of airports in country",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "count"
+        ],
+        "valueColumns": [
+          "#meta+code"
+        ]
+      }
+    },
+    {
+      "name": "Number of airports by type",
+      "title": "Number of airports by type",
+      "description": "The total number of airports by each type",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "count"
+        ],
+        "aggregateColumns": [
+          "#loc+airport+type"
+        ],
+        "valueColumns": [
+          "#country+code+iso2"
+        ]
+      }
+    }
+  ]
+}
