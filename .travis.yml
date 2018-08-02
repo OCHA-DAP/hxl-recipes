@@ -5,7 +5,6 @@ python:
 install:
 - ls -l recipes/*json
 script:
-- cp *.* ./src
 - cd run
 - python3 run.py
 - cp index.html ../recipes/
