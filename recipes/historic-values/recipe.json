@@ -1,6 +1,6 @@
 {
-  "name": "ourairports",
-  "title": "Our Airports",
+  "name": "historicvalues",
+  "title": "Historic Values",
   "type": "cookbook",
   "columns": [
     "#date",
@@ -10,7 +10,6 @@
   "recipes": [
     {
       "name": "Charts: Sum items for a tag grouped by administrative units",
-      "title": "Charts: Sum items for a tag grouped by administrative units",
       "description": "",
       "type": "timeseries",
       "ingredients": {
