@@ -1,0 +1,31 @@
+{
+  "name": "ourairports",
+  "title": "Our Airports",
+  "type": "cookbook",
+  "columns": [
+    "#date",
+    "#item+name",
+    "#value"
+  ],
+  "recipes": [
+    {
+      "name": "Charts: Sum items for a tag grouped by administrative units",
+      "title": "Charts: Sum items for a tag grouped by administrative units",
+      "description": "",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum",
+          "count"
+        ],
+        "aggregateColumns": [
+          "#date",
+          "#item+name"
+        ],
+        "valueColumns": [
+          "#value"
+        ]
+      }
+    }
+  ]
+}
