@@ -4,22 +4,55 @@
   "type": "cookbook",
   "columns": [
     "#date",
-    "#item+name",
+    "#item+name+short",
+    "#item+type",
     "#value"
   ],
   "recipes": [
     {
-      "name": "Charts: Sum items for a tag grouped by administrative units",
-      "description": "",
+      "name": "Median prices for commodities",
+      "description": "Prices of food commodities. Median prices across various markets are shown, prices are scaled (see unit or scaling column). Prices are interpolated on dates when no observation is present (see interpolated column).",
       "type": "timeseries",
       "ingredients": {
         "aggregateFunctions": [
-          "sum",
-          "count"
+          "sum"
         ],
         "aggregateColumns": [
           "#date",
-          "#item+name"
+          "#item+name+short"
+        ],
+        "valueColumns": [
+          "#value"
+        ]
+      }
+    },
+    {
+      "name": "Price trends for commodity categories",
+      "description": "Prices of food commodity categories. Sum of all prices in each category is shown. This gives a general idea of a trend in each category. Note, that proportional weights of different commodities are quite arbitrary and do depend on a country.",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#date",
+          "#item+type"
+        ],
+        "valueColumns": [
+          "#value"
+        ]
+      }
+    },
+    {
+      "name": "Price trends",
+      "description": "Sum of prices of all food commodities. This gives a general idea of a trend of overall food prices. Note, that proportional weights of different commodities are quite arbitrary and do depend on a country.",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#date"
         ],
         "valueColumns": [
           "#value"
