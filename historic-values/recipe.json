@@ -18,7 +18,6 @@
           "sum"
         ],
         "aggregateColumns": [
-          "#date",
           "#item+name+short"
         ],
         "valueColumns": [
@@ -35,7 +34,6 @@
           "sum"
         ],
         "aggregateColumns": [
-          "#date",
           "#item+type"
         ],
         "valueColumns": [
