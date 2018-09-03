@@ -11,7 +11,7 @@
   "recipes": [
     {
       "name": "prices for commodities",
-      "description": "Prices of food commodities. Median prices across various markets are shown, prices are scaled (see unit or scaling column).",
+      "description": "Prices of food commodities. Median prices across various markets are shown.",
       "type": "timeseries",
       "ingredients": {
         "aggregateFunctions": [
