@@ -3,17 +3,9 @@
   "title": "IATI",
   "type": "cookbook",
   "columns": [
-    "#org",
-    "#activity",
+    "#activity+id",
     "#sector",
-    "#subsector",
-    "#region",
-    "#country",
-    "#adm1",
-    "#adm2",
-    "#adm3",
-    "#adm4",
-    "#adm5"
+    "#org+reporting+name"
   ],
   "recipes": [
     {
