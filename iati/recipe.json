@@ -17,7 +17,9 @@
         "aggregateFunctions": [
           "count"
         ],
-        "valueColumn": "#activity+id"
+        "valueColumns": [
+          "#activity+id"
+        ]
       }
     },
     {
@@ -32,7 +34,9 @@
         "aggregateColumns": [
           "#org+reporting+name"
         ],
-        "valueColumn": "#activity+id"
+        "valueColumns":[
+          "#activity+id"
+        ]
       }
     },
     {
@@ -47,7 +51,9 @@
         "aggregateColumns": [
           "#sector"
         ],
-        "valueColumn": "#activity+id"
+        "valueColumns": [
+          "#activity+id"
+        ]
       }
     }
   ]
