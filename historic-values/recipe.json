@@ -1,6 +1,6 @@
 {
-  "name": "historicvalues",
-  "title": "Historic Values",
+  "name": "historicfoodprices",
+  "title": "Historic Food Prices",
   "type": "cookbook",
   "columns": [
     "#date",
