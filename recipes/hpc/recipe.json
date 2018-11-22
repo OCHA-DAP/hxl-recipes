@@ -9,7 +9,7 @@
   ],
   "recipes": [
     {
-      "name": "Population Over Time",
+      "name": "population over time",
       "title": "Population Over Time",
       "description": "",
       "type": "timeseries",
@@ -19,6 +19,23 @@
         ],
         "aggregateColumns": [
           "#date+year"
+        ],
+        "valueColumns": [
+          "#population+total"
+        ]
+      }
+    },
+    {
+      "name":"Population over time",
+      "title":"Population Over Time",
+      "description":"",
+      "type":"chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "date+year"
         ],
         "valueColumns": [
           "#population+total"
