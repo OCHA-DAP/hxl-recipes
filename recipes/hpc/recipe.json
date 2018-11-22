@@ -17,10 +17,10 @@
           "sum"
         ],
         "aggregateColumns": [
-          "#date"
+          "#date+year"
         ],
         "valueColumns": [
-          "#population"
+          "#population+total"
         ]
       }
     }
