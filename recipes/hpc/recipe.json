@@ -17,9 +17,7 @@
         "aggregateFunctions": [
           "sum"
         ],
-        "aggregateColumns": [
-          "#date+year"
-        ],
+        "aggregateColumns": [],
         "valueColumns": [
           "#population+total"
         ]
@@ -74,9 +72,7 @@
         "aggregateFunctions": [
           "sum"
         ],
-        "aggregateColumns": [
-          "#date"
-        ],
+        "aggregateColumns": [],
         "valueColumns": [
           "#affected+undernourished+percent"
         ]
@@ -131,9 +127,7 @@
         "aggregateFunctions": [
           "sum"
         ],
-        "aggregateColumns": [
-          "date+year"
-        ],
+        "aggregateColumns": [],
         "valueColumns": [
           "#affected+dead"
         ]
@@ -173,6 +167,14 @@
             "#date+year": "$MAX$"
           }
         ],
+        "valueColumns": [
+          "#affected+dead"
+        ]
+      }
+    }
+  ]
+}
+    ],
         "valueColumns": [
           "#affected+dead"
         ]
