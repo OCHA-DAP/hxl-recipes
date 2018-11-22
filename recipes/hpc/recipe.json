@@ -175,7 +175,7 @@
         ],
 
         "valueColumns": [
-          "#affected+deaths"
+          "#affected+dead"
         ]
       }
     }
