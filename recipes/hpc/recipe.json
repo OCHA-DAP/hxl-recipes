@@ -1,6 +1,6 @@
 {
-  "name": "population",
-  "title": "Population Data",
+  "name": "indicators over time",
+  "title": "Indicators over time",
   "type": "cookbook",
   "columns": [
     "#date",
@@ -39,6 +39,23 @@
         ],
         "valueColumns": [
           "#population+total"
+        ]
+      }
+    },
+    {
+      "name":"% undernourished over time",
+      "title":"Percentage of Population Undernourished By Year",
+      "description":"",
+      "type":"chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "date+year"
+        ],
+        "valueColumns": [
+          "#affected+undernourished+percent"
         ]
       }
     }
