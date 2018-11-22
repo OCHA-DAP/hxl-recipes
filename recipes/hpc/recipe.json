@@ -26,7 +26,7 @@
       }
     },
     {
-      "name":"Population over time",
+      "name":"population over time",
       "title":"Population Over Time",
       "description":"",
       "type":"chart",
@@ -69,7 +69,7 @@
       "name":"% undernourished over time",
       "title":"Percentage of Population Undernourished By Year",
       "description":"",
-      "type":"chart",
+      "type":"timeseries",
       "ingredients": {
         "aggregateFunctions": [
           "sum"
@@ -119,6 +119,63 @@
 
         "valueColumns": [
           "#affected+undernourished+percent"
+        ]
+      }
+    },
+    {
+      "name":"infant deaths over time",
+      "title":"Infant Deaths By Year",
+      "description":"",
+      "type":"timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "date+year"
+        ],
+        "valueColumns": [
+          "#affected+dead"
+        ]
+      }
+    },
+    {
+      "name":"infant deaths over time",
+      "title":"Infant Deaths By Year",
+      "description":"",
+      "type":"chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "date+year"
+        ],
+        "valueColumns": [
+          "#affected+dead"
+        ]
+      }
+    },
+    {
+      "name": "infant deaths latest year",
+      "title": "Infant Deaths",
+      "description": "",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#country+code+iso2"
+        ],
+        "filtersWith": [
+          {
+            "#date+year": "$MAX$"
+          }
+        ],
+
+        "valueColumns": [
+          "#affected+deaths"
         ]
       }
     }
