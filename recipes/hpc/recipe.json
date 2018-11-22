@@ -1,0 +1,28 @@
+{
+  "name": "population",
+  "title": "Population Data",
+  "type": "cookbook",
+  "columns": [
+    "#date",
+    "#population",
+    "#country"
+  ],
+  "recipes": [
+    {
+      "name": "Population Over Time",
+      "description": "",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#date"
+        ],
+        "valueColumns": [
+          "#population"
+        ]
+      }
+    }
+  ]
+}
