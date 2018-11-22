@@ -78,7 +78,7 @@
           "date+year"
         ],
         "valueColumns": [
-          "#affected"
+          "#affected+undernourished+percent"
         ]
       }
     },
@@ -95,7 +95,7 @@
           "date+year"
         ],
         "valueColumns": [
-          "#affected"
+          "#affected+undernourished+percent"
         ]
       }
     },
@@ -118,7 +118,7 @@
         ],
 
         "valueColumns": [
-          "#affected"
+          "#affected+undernourished+percent"
         ]
       }
     },
@@ -135,7 +135,7 @@
           "date+year"
         ],
         "valueColumns": [
-          "#affected"
+          "#affected+dead"
         ]
       }
     },
@@ -152,7 +152,7 @@
           "date+year"
         ],
         "valueColumns": [
-          "#affected"
+          "#affected+dead"
         ]
       }
     },
@@ -174,7 +174,7 @@
           }
         ],
         "valueColumns": [
-          "#affected"
+          "#affected+dead"
         ]
       }
     }
