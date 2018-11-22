@@ -43,6 +43,29 @@
       }
     },
     {
+      "name": "latest population",
+      "title": "Most Recent Population Estimate",
+      "description": "people",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#country+code+iso2"
+        ],
+        "filtersWith": [
+          {
+            "#date+year": "$MAX$"
+          }
+        ],
+
+        "valueColumns": [
+          "#population+total"
+        ]
+      }
+    },
+    {
       "name":"% undernourished over time",
       "title":"Percentage of Population Undernourished By Year",
       "description":"",
@@ -56,6 +79,23 @@
         ],
         "valueColumns": [
           "#affected+undernourished+percent"
+        ]
+      }
+    },
+    {
+      "name":"% undernourished over time",
+      "title":"Percentage of Population Undernourished By Year",
+      "description":"",
+      "type":"chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "date+year"
+        ],
+        "valueColumns": [
+          "#affected+undernourished+total"
         ]
       }
     }
