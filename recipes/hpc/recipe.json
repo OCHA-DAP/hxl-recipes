@@ -135,7 +135,7 @@
           "date+year"
         ],
         "valueColumns": [
-          "#affected+dead"
+          "#affected"
         ]
       }
     },
@@ -152,7 +152,7 @@
           "date+year"
         ],
         "valueColumns": [
-          "#affected+dead"
+          "#affected"
         ]
       }
     },
@@ -173,9 +173,8 @@
             "#date+year": "$MAX$"
           }
         ],
-
         "valueColumns": [
-          "#affected+dead"
+          "#affected"
         ]
       }
     }
