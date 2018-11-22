@@ -66,6 +66,63 @@
       }
     },
     {
+      "name":"% undernourished over time",
+      "title":"Percentage of Population Undernourished By Year",
+      "description":"",
+      "type":"timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "date+year"
+        ],
+        "valueColumns": [
+          "#affected"
+        ]
+      }
+    },
+    {
+      "name":"% undernourished over time",
+      "title":"Percentage of Population Undernourished By Year",
+      "description":"",
+      "type":"chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "date+year"
+        ],
+        "valueColumns": [
+          "#affected"
+        ]
+      }
+    },
+    {
+      "name": "latest undernourished percentage",
+      "title": "Percent of Population Undernourished",
+      "description": "",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#country+code+iso2"
+        ],
+        "filtersWith": [
+          {
+            "#date+year": "$MAX$"
+          }
+        ],
+
+        "valueColumns": [
+          "#affected"
+        ]
+      }
+    },
+    {
       "name":"infant deaths over time",
       "title":"Infant Deaths By Year",
       "description":"",
