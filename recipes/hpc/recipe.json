@@ -10,7 +10,7 @@
   "recipes": [
     {
       "name": "Population Over Time",
-      "description": "",
+      "description": "Population Over Time",
       "type": "timeseries",
       "ingredients": {
         "aggregateFunctions": [
