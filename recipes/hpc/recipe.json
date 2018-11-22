@@ -71,6 +71,10 @@
       "description":"",
       "type":"timeseries",
       "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [],
         "valueColumns": [
           "#affected+undernourished+percent"
         ]
