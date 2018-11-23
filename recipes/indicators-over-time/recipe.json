@@ -1,0 +1,78 @@
+{
+  "name": "indicators over time",
+  "title": "Indicators over time",
+  "type": "cookbook",
+  "columns": [
+    "#country+name",
+    "#country+code",
+    "#date+year",
+    "#indicator+name",
+    "#indicator+code",
+    "#indicator+num"
+  ],
+  "recipes": [
+    {
+      "name": "timeseries-indicatorovertime",
+      "title": "Indicator Over Time",
+      "description": "",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#country+code",
+          "#indicator+code",
+          "#date"
+        ],
+        "valueColumns": [
+          "#indicator+num"
+        ]
+      }
+    },
+    {
+      "name":"chart-indicatorovertime",
+      "title":"Indicator Over Time",
+      "description":"",
+      "type":"chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#country+code",
+          "#indicator+code",
+          "#date"
+        ],
+        "valueColumns": [
+          "#indicator+num"
+        ]
+      }
+    },
+    {
+      "name": "keyfigure-indicatorlatestvalue",
+      "title": "Most Recent Indicator Value",
+      "description": "",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#country+code",
+          "#indicator+code",
+          "#date"
+        ],
+        "filtersWith": [
+          {
+            "#date+year": "$MAX$"
+          }
+        ],
+
+        "valueColumns": [
+          "#indicator+num"
+        ]
+      }
+    }
+  ]
+}
