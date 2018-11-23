@@ -17,7 +17,9 @@
         "aggregateFunctions": [
           "sum"
         ],
-        "aggregateColumns": [],
+        "aggregateColumns": [
+          "#date+year"
+        ],
         "valueColumns": [
           "#population+total"
         ]
