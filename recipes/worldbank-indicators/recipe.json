@@ -35,18 +35,22 @@
       }
     },
     {
-      "name":"chart-indicatorovertime",
-      "title":"Indicator Over Time",
-      "description":"",
-      "type":"chart",
+      "name": "worldbank-indicators-population-by-year",
+      "title": "Number of Infant Deaths By Year",
+      "description": "",
+      "type": "timeseries",
       "ingredients": {
         "aggregateFunctions": [
           "sum"
         ],
         "aggregateColumns": [
-          "#country+code",
-          "#indicator+code",
-          "#date"
+          "#indicator+name",
+          "#date+year"
+        ],
+        "filtersWith": [
+          {
+            "#indicator+name": "Number of infant deaths"
+          }
         ],
         "valueColumns": [
           "#indicator+num"
