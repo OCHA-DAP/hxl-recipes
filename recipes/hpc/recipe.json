@@ -18,7 +18,7 @@
           "sum"
         ],
         "aggregateColumns": [
-          "#date+year"
+          "#date"
         ],
         "valueColumns": [
           "#population+total"
@@ -35,7 +35,7 @@
           "sum"
         ],
         "aggregateColumns": [
-          "date+year"
+          "#date"
         ],
         "valueColumns": [
           "#population+total"
@@ -75,7 +75,8 @@
           "sum"
         ],
         "aggregateColumns": [
-          "#date+year"],
+          "#date+year"
+        ],
         "valueColumns": [
           "#affected+undernourished+percent"
         ]
@@ -91,7 +92,7 @@
           "sum"
         ],
         "aggregateColumns": [
-          "date+year"
+          "#date+year"
         ],
         "valueColumns": [
           "#affected+undernourished+percent"
@@ -131,7 +132,8 @@
           "sum"
         ],
         "aggregateColumns": [
-          "#date+year"],
+          "#date+year"
+        ],
         "valueColumns": [
           "#affected+dead"
         ]
@@ -147,7 +149,7 @@
           "sum"
         ],
         "aggregateColumns": [
-          "date+year"
+          "#date+year"
         ],
         "valueColumns": [
           "#affected+dead"
