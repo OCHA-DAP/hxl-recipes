@@ -21,7 +21,7 @@
           "sum"
         ],
         "aggregateColumns": [
-          "#date+year",
+          "#date+year"
         ],
         "filtersWith": [
           {
@@ -43,7 +43,7 @@
           "sum"
         ],
         "aggregateColumns": [
-          "date+year",
+          "date+year"
         ],
         "filtersWith": [
           {
@@ -65,7 +65,7 @@
           "sum"
         ],
         "aggregateColumns": [
-          "#date+year",
+          "#date+year"
         ],
         "filtersWith": [
           {
