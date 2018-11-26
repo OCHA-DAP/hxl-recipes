@@ -20,9 +20,7 @@
         "aggregateFunctions": [
           "sum"
         ],
-        "aggregateColumns": [
-          "#date+year"
-        ],
+        "aggregateColumns": [],
         "filtersWith": [
           {
             "#indicator+name": "Population, total"
@@ -42,9 +40,7 @@
         "aggregateFunctions": [
           "sum"
         ],
-        "aggregateColumns": [
-          "date+year"
-        ],
+        "aggregateColumns": [],
         "filtersWith": [
           {
             "#indicator+name": "Number of infant deaths"
@@ -64,9 +60,7 @@
         "aggregateFunctions": [
           "sum"
         ],
-        "aggregateColumns": [
-          "#date+year"
-        ],
+        "aggregateColumns": [],
         "filtersWith": [
           {
             "#indicator+name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)"
@@ -86,9 +80,7 @@
         "aggregateFunctions": [
           "sum"
         ],
-        "aggregateColumns": [
-          "#date+year"
-        ],
+        "aggregateColumns": [],
         "filtersWith": [
           {
             "#indicator+name": "Prevalence of undernourishment (% of population)"
