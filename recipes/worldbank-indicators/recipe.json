@@ -24,6 +24,11 @@
           "#indicator+name",
           "#date+year"
         ],
+        "filtersWith": [
+          {
+            "#indicator+name": "Population, total"
+          }
+        ],
         "valueColumns": [
           "#indicator+num"
         ]
@@ -67,7 +72,6 @@
             "#date+year": "$MAX$"
           }
         ],
-
         "valueColumns": [
           "#indicator+num"
         ]
