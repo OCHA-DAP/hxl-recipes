@@ -35,7 +35,7 @@
       }
     },
     {
-      "name": "worldbank-indicators-population-by-year",
+      "name": "worldbank-indicators-infant-deaths-by-year",
       "title": "Number of Infant Deaths By Year",
       "description": "",
       "type": "timeseries",
@@ -57,23 +57,22 @@
         ]
       }
     },
-    {
-      "name": "keyfigure-indicatorlatestvalue",
-      "title": "Most Recent Indicator Value",
-      "description": "",
-      "type": "key figure",
+        {
+      "name": "worldbank-indicators-poverty-headcount-ratio",
+      "title": "Percentage of Population in Poverty",
+      "description": "Percentage of the population living on less than $1.90 a day at 2011 international prices.",
+      "type": "timeseries",
       "ingredients": {
         "aggregateFunctions": [
           "sum"
         ],
         "aggregateColumns": [
-          "#country+code",
-          "#indicator+code",
-          "#date"
+          "#indicator+name",
+          "#date+year"
         ],
         "filtersWith": [
           {
-            "#date+year": "$MAX$"
+            "#indicator+name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)"
           }
         ],
         "valueColumns": [
