@@ -1,6 +1,6 @@
 {
-  "name": "indicators over time",
-  "title": "Indicators over time",
+  "name": "worldbank-indicators",
+  "title": "Worldbank Indicators",
   "type": "cookbook",
   "columns": [
     "#country+name",
@@ -12,8 +12,8 @@
   ],
   "recipes": [
     {
-      "name": "timeseries-indicatorovertime",
-      "title": "Indicator Over Time",
+      "name": "worldbank-indicators-population-by-year",
+      "title": "Total Population By Year",
       "description": "",
       "type": "timeseries",
       "ingredients": {
@@ -21,9 +21,8 @@
           "sum"
         ],
         "aggregateColumns": [
-          "#country+code",
-          "#indicator+code",
-          "#date"
+          "#indicator+name",
+          "#date+year"
         ],
         "valueColumns": [
           "#indicator+num"
