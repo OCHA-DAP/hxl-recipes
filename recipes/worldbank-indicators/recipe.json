@@ -76,6 +76,28 @@
           "#indicator+num"
         ]
       }
+    },
+    {
+      "name": "worldbank-indicators-poverty-undernourishment",
+      "title": "Percentage of Population of Undernourished",
+      "description": "percentage of the population whose food intake is insufficient to meet dietary energy requirements continuously. Data showing as 5 may signify a prevalence of undernourishment below 5%.",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#date+year"
+        ],
+        "filtersWith": [
+          {
+            "#indicator+name": "Prevalence of undernourishment (% of population)"
+          }
+        ],
+        "valueColumns": [
+          "#indicator+num"
+        ]
+      }
     }
   ]
 }
