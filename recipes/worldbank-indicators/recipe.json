@@ -44,7 +44,26 @@
         "filtersWith": [
           {
             "#indicator+name": "Number of infant deaths",
-            "#indicator+num": "$>$0"
+          }
+        ],
+        "valueColumns": [
+          "#indicator+num"
+        ]
+      }
+    },
+    {
+      "name": "worldbank-indicators-infant-deaths-by-year",
+      "title": "Number of Infant Deaths By Year",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [],
+        "filtersWith": [
+          {
+            "#indicator+name": "Number of infant deaths",
           }
         ],
         "valueColumns": [
