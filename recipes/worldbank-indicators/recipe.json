@@ -41,7 +41,9 @@
         "aggregateColumns": [],
         "filtersWith": [
           {
-            "#indicator+name": "Population, total",
+            "#indicator+name": "Population, total"
+          },
+          {
             "#year+date": "$MAX$"
           }
         ]
