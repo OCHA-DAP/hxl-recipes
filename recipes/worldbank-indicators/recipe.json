@@ -34,7 +34,7 @@
     {
       "name": "worldbank-indicators-latest-population",
       "title": "Population",
-      "description": "Most   available population estimate.",
+      "description": "Most recently available population estimate.",
       "type": "key figure",
       "ingredients": {
         "aggregateFunctions": ["sum"],
@@ -46,6 +46,9 @@
           {
             "#year+date": "$MAX$"
           }
+        ],
+        "valueColumns": [
+          "#indicator+num"
         ]
       }
     },
