@@ -34,7 +34,7 @@
     {
       "name": "worldbank-indicators-latest-population",
       "title": "Population",
-      "description": "Most recently available population estimate.",
+      "description": "Most   available population estimate.",
       "type": "key figure",
       "ingredients": {
         "aggregateFunctions": ["sum"],
@@ -136,7 +136,7 @@
     {
       "name": "worldbank-indicators-poverty-undernourishment",
       "title": "Percentage of Population of Undernourished",
-      "description": "percentage of the population whose food intake is insufficient to meet dietary energy requirements continuously. Data showing as 5 may signify a prevalence of undernourishment below 5%.",
+      "description": "Percentage of the population whose food intake is insufficient to meet dietary energy requirements continuously. Data showing as 5 may signify a prevalence of undernourishment below 5%.",
       "type": "timeseries",
       "ingredients": {
         "aggregateFunctions": [
