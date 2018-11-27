@@ -43,7 +43,7 @@
         "aggregateColumns": [],
         "filtersWith": [
           {
-            "#indicator+name": "Number of infant deaths",
+            "#indicator+name": "Number of infant deaths"
           }
         ],
         "valueColumns": [
@@ -63,7 +63,7 @@
         "aggregateColumns": [],
         "filtersWith": [
           {
-            "#indicator+name": "Number of infant deaths",
+            "#indicator+name": "Number of infant deaths"
           }
         ],
         "valueColumns": [
