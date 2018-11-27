@@ -46,7 +46,7 @@
           }
         ]
       }
-    }
+    },
     {
       "name": "worldbank-indicators-infant-deaths-by-year",
       "title": "Number of Infant Deaths By Year",
@@ -76,7 +76,9 @@
         "aggregateFunctions": [
           "sum"
         ],
-        "aggregateColumns": [],
+        "aggregateColumns": [
+          "#date+year"
+        ],
         "filtersWith": [
           {
             "#indicator+name": "Number of infant deaths"
@@ -116,7 +118,9 @@
         "aggregateFunctions": [
           "sum"
         ],
-        "aggregateColumns": [],
+        "aggregateColumns": [
+          "#date+year"
+        ],
         "filtersWith": [
           {
             "#indicator+name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)"
@@ -156,7 +160,8 @@
         "aggregateFunctions": [
           "sum"
         ],
-        "aggregateColumns": [],
+        "aggregateColumns": [
+          "#date+year"],
         "filtersWith": [
           {
             "#indicator+name": "Prevalence of undernourishment (% of population)"
