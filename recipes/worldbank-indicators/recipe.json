@@ -32,6 +32,22 @@
       }
     },
     {
+      "name": "worldbank-indicators-latest-population",
+      "title": "Population",
+      "description": "Most recently available population estimate.",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": ["sum"],
+        "aggregateColumns": [],
+        "filtersWith": [
+          {
+            "#indicator+name": "Population, total",
+            "#year+date": "$MAX$"
+          }
+        ]
+      }
+    }
+    {
       "name": "worldbank-indicators-infant-deaths-by-year",
       "title": "Number of Infant Deaths By Year",
       "description": "",
