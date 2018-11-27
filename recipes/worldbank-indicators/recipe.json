@@ -44,7 +44,7 @@
         "filtersWith": [
           {
             "#indicator+name": "Number of infant deaths",
-            "#indicator+num": ">0"
+            "#indicator+num": "$>$0"
           }
         ],
         "valueColumns": [
