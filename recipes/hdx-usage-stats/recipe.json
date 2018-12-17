@@ -1,0 +1,77 @@
+{
+  "name": "hdx-summary-stats",
+  "title": "HDX Summary Stats",
+  "type": "cookbook",
+  "columns": [
+    "#indicator+name",
+    "#date+year",
+    "#date+week",
+    "#date+start",
+    "#date+end",
+    "#loc+name",
+    "#value"
+  ],
+  "recipes": [
+    {
+      "name": "unique-users-by-country",
+      "title": "Unique Users By Country",
+      "description": "Total number of users in 2018 by Country. Individual users are identified by browser cookie, IP address, etc.",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [],
+        "filtersWith": [
+          {
+            "#indicator+name": "unique visitors by country"
+          }
+        ],
+        "valueColumns": [
+          "#value"
+        ]
+      }
+    },
+    {
+      "name": "total-datasets-on-hdx",
+      "title": "Total Number of Datasets on HDX",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": ["sum"],
+        "aggregateColumns": [],
+        "filtersWith": [
+          {
+            "#indicator+name": "datasets on hdx"
+          }
+        ],
+        "valueColumns": [
+          "#value"
+        ]
+      }
+    },
+    {
+      "name": "hxlated-datasets",
+      "title": "Number of Datasets with HXL Tags",
+      "description": "",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [],
+        "filtersWith": [
+          {
+            "#indicator+name": "hxlated datasets on hdx"
+          },
+          {
+            "#date+end": "$MAX$"
+          }
+        ],
+        "valueColumns": [
+          "#value"
+        ]
+      }
+    }
+  ]
+}
