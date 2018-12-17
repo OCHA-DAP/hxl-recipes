@@ -60,9 +60,6 @@
         "aggregateColumns": [],
         "filtersWith": [
           {
-            "#indicator+name": "hxlated datasets on hdx"
-          },
-          {
             "#date+end": "$MAX$"
           }
         ],
