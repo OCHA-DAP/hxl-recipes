@@ -36,10 +36,10 @@
       "name": "total-datasets-on-hdx",
       "title": "Total Number of Datasets on HDX",
       "description": "",
-      "type": "chart",
+      "type": "time series",
       "ingredients": {
         "aggregateFunctions": ["sum"],
-        "aggregateColumns": [],
+        "aggregateColumns": ["#date+end"],
         "filtersWith": [
           {
             "#indicator+name": "datasets on hdx"
@@ -56,9 +56,7 @@
       "description": "",
       "type": "key figure",
       "ingredients": {
-        "aggregateFunctions": [
-          "sum"
-        ],
+        "aggregateFunctions": [],
         "aggregateColumns": [],
         "filtersWith": [
           {
