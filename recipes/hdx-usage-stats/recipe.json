@@ -21,7 +21,7 @@
         "aggregateFunctions": [
           "sum"
         ],
-        "aggregateColumns": [],
+        "aggregateColumns": ["#loc+name"],
         "filtersWith": [
           {
             "#indicator+name": "unique visitors by country"
