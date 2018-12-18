@@ -48,8 +48,29 @@
             }
         },
         {
-            "name": "hxlated-datasets",
-            "title": "Number of Datasets with HXL Tags",
+            "name": "latest-total-datasets-on-hdx",
+            "title": "Number of Datasets on HDX at Year End",
+            "description": "",
+            "type": "key figure",
+            "ingredients": {
+                "aggregateFunctions": [],
+                "aggregateColumns": [],
+                "filtersWith": [
+                    {
+                    "#indicator+name": "datasets on hdx"
+                    },
+                    {
+                    "#date": "$MAX$"
+                    }
+                ],
+                "valueColumns": [
+                    "#value"
+                ]
+            }
+        },
+        {
+            "name": "latest-hxlated-datasets-on-hdx",
+            "title": "Number of Datasets with HXL Tags at Year End",
             "description": "",
             "type": "key figure",
             "ingredients": {
@@ -60,7 +81,7 @@
                     "#indicator+name": "hxlated datasets on hdx"
                     },
                     {
-                    "#date+end": "$MAX$"
+                    "#date": "$MAX$"
                     }
                 ],
                 "valueColumns": [
@@ -79,6 +100,60 @@
                 "filtersWith": [
                     {
                     "#indicator+name": "orgs on hdx"
+                    }
+                ],
+                "valueColumns": [
+                    "#value"
+                ]
+            }
+        },
+        {
+            "name": "unique-users",
+            "title": "Unique HDX Users",
+            "description": "",
+            "type": "timeseries",
+            "ingredients": {
+                "aggregateFunctions": ["sum"],
+                "aggregateColumns": ["#date"],
+                "filtersWith": [
+                    {
+                    "#indicator+name": "unique users on hdx&tools"
+                    }
+                ],
+                "valueColumns": [
+                    "#value"
+                ]
+            }
+        },
+        {
+            "name": "total-downloads",
+            "title": "Total Downloads",
+            "description": "Total number of dataset downloads on HDX, excluding known indexing bots",
+            "type": "timeseries",
+            "ingredients": {
+                "aggregateFunctions": ["sum"],
+                "aggregateColumns": ["#date"],
+                "filtersWith": [
+                    {
+                    "#indicator+name": "total downloads"
+                    }
+                ],
+                "valueColumns": [
+                    "#value"
+                ]
+            }
+        },
+        {
+            "name": "unqiue-downloaders",
+            "title": "Users downloading datasets from HDX",
+            "description": "Individual users downloading at least one dataset from HDX, excluding known indexing bots",
+            "type": "timeseries",
+            "ingredients": {
+                "aggregateFunctions": ["sum"],
+                "aggregateColumns": ["#date"],
+                "filtersWith": [
+                    {
+                    "#indicator+name": "unique human and programmatic downloads (excl known bots)"
                     }
                 ],
                 "valueColumns": [
