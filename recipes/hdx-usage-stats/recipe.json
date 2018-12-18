@@ -39,7 +39,7 @@
       "type": "timeseries",
       "ingredients": {
         "aggregateFunctions": ["sum"],
-        "aggregateColumns": ["date+end"],
+        "aggregateColumns": ["#date"],
         "filtersWith": [
           {
             "#indicator+name": "datasets on hdx"
