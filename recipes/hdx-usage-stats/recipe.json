@@ -32,7 +32,7 @@
         {
             "name": "total-datasets-on-hdx",
             "title": "Total Number of Datasets on HDX",
-            "description": "A significant data cleaning exercise mid-year resulted in a drop in the total number of datasts, however the steady growth in datasets contributed by our users has continued.",
+            "description": "A significant data cleaning exercise mid-year resulted in a drop in the total number of datasts, however the steady growth in datasets contributed by HDX users has continued.",
             "type": "timeseries",
             "ingredients": {
                 "aggregateFunctions": ["sum"],
