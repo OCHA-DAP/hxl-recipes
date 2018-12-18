@@ -89,7 +89,7 @@
         {
             "name": "unique-users",
             "title": "Unique Weekly HDX Users",
-            "description": "",
+            "description": "Number of individual users who visited HDX each week.  Uniqueness determined by IP address, browser cookie, etc.",
             "type": "timeseries",
             "ingredients": {
                 "aggregateFunctions": ["sum"],
