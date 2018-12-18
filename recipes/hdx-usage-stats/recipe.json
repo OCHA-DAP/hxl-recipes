@@ -145,7 +145,7 @@
         },
         {
             "name": "unqiue-downloaders",
-            "title": "Users downloading datasets from HDX, by week",
+            "title": "Users Downloading Datasets From HDX, By Week",
             "description": "Individual users downloading at least one dataset from HDX, excluding known indexing bots",
             "type": "timeseries",
             "ingredients": {
