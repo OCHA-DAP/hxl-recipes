@@ -5,30 +5,9 @@
     "columns": [
         "#indicator+name",
         "#date",
-        "#loc+name",
         "#value"
     ],
     "recipes": [
-        {
-            "name": "unique-users-by-country",
-            "title": "Unique Users By Country",
-            "description": "Total number of users in 2018 by Country. Individual users are identified by browser cookie, IP address, etc.",
-            "type": "chart",
-            "ingredients": {
-                "aggregateFunctions": [
-                "sum"
-                ],
-                "aggregateColumns": ["#loc+name"],
-                "filtersWith": [
-                {
-                    "#indicator+name": "unique visitors by country"
-                }
-                ],
-                "valueColumns": [
-                "#value"
-                ]
-            }
-        },
         {
             "name": "total-datasets-on-hdx",
             "title": "Total Number of Datasets on HDX",
