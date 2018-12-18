@@ -109,7 +109,7 @@
         },
         {
             "name": "unique-users",
-            "title": "Unique HDX Users",
+            "title": "Unique Weekly HDX Users",
             "description": "",
             "type": "timeseries",
             "ingredients": {
@@ -128,7 +128,7 @@
         {
             "name": "total-downloads",
             "title": "Total Downloads",
-            "description": "Total number of dataset downloads on HDX, excluding known indexing bots",
+            "description": "Total number of dataset downloads on HDX, by week, excluding known indexing bots",
             "type": "timeseries",
             "ingredients": {
                 "aggregateFunctions": ["sum"],
@@ -145,7 +145,7 @@
         },
         {
             "name": "unqiue-downloaders",
-            "title": "Users downloading datasets from HDX",
+            "title": "Users downloading datasets from HDX, by week",
             "description": "Individual users downloading at least one dataset from HDX, excluding known indexing bots",
             "type": "timeseries",
             "ingredients": {
