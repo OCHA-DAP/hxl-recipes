@@ -4,10 +4,7 @@
   "type": "cookbook",
   "columns": [
     "#indicator+name",
-    "#date+year",
-    "#date+week",
-    "#date+start",
-    "#date+end",
+    "#date",
     "#loc+name",
     "#value"
   ],
