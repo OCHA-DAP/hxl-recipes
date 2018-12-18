@@ -32,7 +32,7 @@
         {
             "name": "total-datasets-on-hdx",
             "title": "Total Number of Datasets on HDX",
-            "description": "",
+            "description": "A significant data cleaning exercise mid-year resulted in a drop in the total number of datasts, however the steady growth in datasets contributed by our users has continued.",
             "type": "timeseries",
             "ingredients": {
                 "aggregateFunctions": ["sum"],
@@ -71,7 +71,7 @@
         {
             "name": "latest-hxlated-datasets-on-hdx",
             "title": "Number of Datasets with HXL Tags at Year End",
-            "description": "",
+            "description": "Number of datasets using the Humanitarian eXchange Language as of the end of 2018.",
             "type": "key figure",
             "ingredients": {
                 "aggregateFunctions": [],
