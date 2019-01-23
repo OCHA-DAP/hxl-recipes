@@ -1,0 +1,60 @@
+{
+  "name": "IATI",
+  "title": "IATI",
+  "type": "cookbook",
+  "columns": [
+    "#activity+id",
+    "#sector",
+    "#org+reporting+name"
+  ],
+  "recipes": [
+    {
+      "title": "Current aid activities",
+      "name": "Current aid activities",
+      "description": "",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "count"
+        ],
+        "valueColumns": [
+          "#activity+id"
+        ]
+      }
+    },
+    {
+      "title": "Most-active reporting organisations",
+      "name": "Most-active reporting organisations",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "distinct-count"
+        ],
+        "aggregateColumns": [
+          "#org+reporting+name"
+        ],
+        "valueColumns":[
+          "#activity+id"
+        ]
+      }
+    },
+    {
+      "title": "Most-active sectors",
+      "name": "Most-active sectors",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "distinct-count"
+        ],
+        "aggregateColumns": [
+          "#sector"
+        ],
+        "valueColumns": [
+          "#activity+id"
+        ]
+      }
+    }
+  ]
+}
