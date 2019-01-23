@@ -1,87 +1,586 @@
 {
-  "name":"unhcr-popstats",
-  "title": "Persons of Concern",
-  "type":"cookbook",
-  "columns": [
-    "#affected+total",
-    "#country+residence",
-    "#country+origin",
-    "#date+year"
-  ],
-  "recipes": [
-    {
-      "name": "Total population of concern by year",
-      "title": "Total population of concern by year",
-      "description": "Refugees, Internally displaced people, returned IDPs, Ayslum seekers, returned refugees",
-      "type": "chart",
-      "ingredients": {
-        "aggregateFunctions": [
-          "sum"
-        ],
-        "aggregateColumns": [
-          "#date+year"
-        ],
-        "valueColumns": [
-          "#affected+total"
-        ]
-      }
-    },
-    {
-      "name": "Total population of concern in the last year",
-      "title": "Total population of concern in the last year",
-      "description": "Refugees, Internally displaced people, returned IDPs, Ayslum seekers, returned refugees in the last year",
-      "type": "key figure",
-      "ingredients": {
-        "aggregateFunctions": [
-          "sum"
-        ],
-        "filtersWith": [
-          {
-            "#date+year": "$MAX$"
-          }
-        ],
-        "aggregateColumns": [
-          "#date+year"
-        ],
-        "valueColumns": [
-          "#affected+total"
-        ]
-      }
-    },
-
-    {
-      "name": "Top countries of origin",
-      "title": "Top countries of origin",
-      "description": "Top most-common countries of origin",
-      "type": "chart",
-      "ingredients": {
-        "aggregateFunctions": [
-          "sum"
-        ],
-        "aggregateColumns": [
-          "#country+origin"
-        ],
-        "valueColumns": [
-          "#affected+total"
-        ]
-      }
-    },
-    {
-      "name": "Top host countries",
-      "title": "Top host countries",
-      "description": "Top most-common host countries",
-      "type": "chart",
-      "ingredients": {
-        "aggregateFunctions": [
-          "sum"
-        ],
-        "aggregateColumns": [
-          "#country+residence"
-        ],
-        "valueColumns": [
-          "#affected+total"
-        ]
-      }
-    }
-  ]
+    "name":"UNHCR Popstats cookbooks",
+    "title":"UNHCR Popstats cookbooks",
+    "type":"cookbook-library",
+    "cookbooks":[
+        {
+            "name": "Populations of concern",
+            "title": "Populations of concern",
+            "type": "cookbook",
+            "columns": [
+                "#date+year",
+                "#country+residence",
+                "#country+origin",
+                "#affected+refugees",
+                "#affected+total"
+            ],
+            "recipes": [
+                {
+                    "name": "Population of concern (latest year)",
+                    "title": "Population of concern (latest year)",
+                    "description": "",
+                    "type": "key figure",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [],
+                        "valueColumns": [
+                            "#affected+total"
+                        ]
+                    }
+                },
+                {
+                    "name": "Countries of origin (latest year)",
+                    "title": "Countries of origin (latest year)",
+                    "description": "",
+                    "type": "chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [
+                            "#country+origin"
+                        ],
+                        "valueColumns": [
+                            "#affected+total"
+                        ]
+                    }
+                },
+                {
+                    "name": "Countries of residence (latest year)",
+                    "title": "Countries of residence (latest year)",
+                    "description": "",
+                    "type": "chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [
+                            "#country+residence"
+                        ],
+                        "valueColumns": [
+                            "#affected+total"
+                        ]
+                    }
+                },
+                {
+                    "name": "Total population of concern by year",
+                    "title": "Total population of concern by year",
+                    "description": "",
+                    "type": "chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "aggregateColumns": [
+                            "#date+year"
+                        ],
+                        "valueColumns": [
+                            "#affected+total"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name":"Time series",
+            "title": "Time series",
+            "type":"cookbook",
+            "columns": [
+                "#date+year",
+                "#country+residence",
+                "#country+origin",
+                "#population+type",
+                "#affected"
+            ],
+            "recipes": [
+                {
+                    "name": "Population of concern (latest year)",
+                    "title": "Population of concern (latest year)",
+                    "description": "",
+                    "type": "key figure",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [],
+                        "valueColumns": [
+                            "#affected"
+                        ]
+                    }
+                },
+                {
+                    "name": "Population types (latest year)",
+                    "title": "Population types (latest year)",
+                    "description": "",
+                    "type": "chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [
+                            "#population+type"
+                        ],
+                        "valueColumns": [
+                            "#affected"
+                        ]
+                    }
+                },
+                {
+                    "name": "Countries of residence (latest year)",
+                    "title": "Countries of residence (latest year)",
+                    "description": "",
+                    "type": "chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [
+                            "#country+residence"
+                        ],
+                        "valueColumns": [
+                            "#affected"
+                        ]
+                    }
+                },
+                {
+                    "name": "Countries of origin (latest year)",
+                    "title": "Countries of origin (latest year)",
+                    "description": "",
+                    "type": "chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [
+                            "#country+origin"
+                        ],
+                        "valueColumns": [
+                            "#affected"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name":"Asylum seekers",
+            "title": "Asylum seekers",
+            "type":"cookbook",
+            "columns": [
+                "#date+year",
+                "#country+origin",
+                "#x_applicants+inyear"
+            ],
+            "recipes": [
+                {
+                    "name": "New asylum seekers (latest year)",
+                    "title": "New asylum seekers (latest year)",
+                    "description": "",
+                    "type": "key figure",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            },
+                            {
+                                "#x_procedure+rsd": "G / FI"
+                            }
+                        ],
+                        "aggregateColumns": [],
+                        "valueColumns": [
+                            "#x_applicants+inyear"
+                        ]
+                    },
+                    "uiProperties": {
+                        "numberFormat": "us",
+                        "unit": "none",
+                        "postText": "new asylum seekers",
+                        "title": "Total new asylum seekers (latest year)"
+                    }
+                },
+                {
+                    "name": "New applicants' countries of origin (latest year)",
+                    "title": "Countries of origin (latest year)",
+                    "description": "",
+                    "type": "chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            },
+                            {
+                                "#x_procedure+rsd": "G / FI"
+                            }
+                        ],
+                        "aggregateColumns": [
+                            "#country+origin"
+                        ],
+                        "valueColumns": [
+                            "#x_applicants+inyear"
+                        ]
+                    }
+                },
+                {
+                    "name": "Positive decisions (latest year)",
+                    "title": "Positive decisions (latest year)",
+                    "description": "",
+                    "type": "comparison-chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [
+                            "#country+origin"
+                        ],
+                        "valueColumns": [
+                            "#x_decisions+recognized / #x_decisions+other"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name":"UNHCR Popstats demographics",
+            "title": "UNHCR Popstats demographics",
+            "type":"cookbook",
+            "columns": [
+                "#date+year",
+                "#loc+name",
+                "#affected+m+total",
+                "#affected+f+total"
+            ],
+            "recipes": [
+                {
+                    "name": "Total females (latest year)",
+                    "title": "Total females (latest year)",
+                    "description": "",
+                    "type": "key figure",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [],
+                        "valueColumns": [
+                            "#affected+f+total"
+                        ]
+                    }
+                },
+                {
+                    "name": "Total males (latest year)",
+                    "title": "Total males (latest year)",
+                    "description": "",
+                    "type": "key figure",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [],
+                        "valueColumns": [
+                            "#affected+m+total"
+                        ]
+                    }
+                },
+                {
+                    "name": "By year",
+                    "title": "By year",
+                    "type": "comparison-chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "aggregateColumns": [
+                            "#date+year"
+                        ],
+                        "valueColumns": [
+                            "#affected+f+total / #affected+m+total"
+                        ]
+                    }
+                },
+                {
+                    "name": "By location (latest year)",
+                    "title": "By location (latest year)",
+                    "type": "comparison-chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "aggregateColumns": [
+                            "#loc+name"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "valueColumns": [
+                            "#affected+f+total / #affected+m+total"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name":"Asylum seekers (monthly)",
+            "title": "Asylum seekers (monthly)",
+            "type":"cookbook",
+            "columns": [
+                "#country+asylum",
+                "#country+origin",
+                "#date+year",
+                "#date+month",
+                "#affected"
+            ],
+            "recipes": [
+                {
+                    "name": "Total new asylum seekers (latest year)",
+                    "title": "Total new asylum seekers (latest year)",
+                    "description": "",
+                    "type": "key figure",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [],
+                        "valueColumns": [
+                            "#affected"
+                        ]
+                    },
+                    "uiProperties": {
+                        "numberFormat": "us",
+                        "unit": "none",
+                        "postText": "new asylum seekers",
+                        "title": "Total new asylum seekers (latest year)"
+                    }
+                },
+                {
+                    "name": "Total new asylum seekers by month (latest year)",
+                    "title": "Total new asylum seekers by month (latest year)",
+                    "description": "",
+                    "type": "chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [
+                            "#date+month"
+                        ],
+                        "valueColumns": [
+                            "#affected"
+                        ]
+                    }
+                },
+                {
+                    "name": "Total new asylum seekers by country of asylum (latest year)",
+                    "title": "Total new asylum seekers by country of asylum (latest year)",
+                    "description": "",
+                    "type": "chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [
+                            "#country+asylum"
+                        ],
+                        "valueColumns": [
+                            "#affected"
+                        ]
+                    }
+                },
+                {
+                    "name": "Total new asylum seekers by country of origin (latest year)",
+                    "title": "Total new asylum seekers by country of origin (latest year)",
+                    "description": "",
+                    "type": "chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [
+                            "#country+origin"
+                        ],
+                        "valueColumns": [
+                            "#affected"
+                        ]
+                    }
+                }
+            ]
+        },
+                {
+            "name":"Resettlement arrivals",
+            "title": "Resettlement arrivals",
+            "type":"cookbook",
+            "columns": [
+                "#date+year",
+                "#country+origin",
+                "#country+asylum",
+                "#affected"
+            ],
+            "recipes": [
+                {
+                    "name": "Total new resettlements (latest year)",
+                    "title": "Total new resettlements (latest year)",
+                    "description": "",
+                    "type": "key figure",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [],
+                        "valueColumns": [
+                            "#affected"
+                        ]
+                    },
+                    "uiProperties": {
+                        "numberFormat": "us",
+                        "unit": "none",
+                        "postText": "new asylum seekers",
+                        "title": "Total new asylum seekers (latest year)"
+                    }
+                },
+                {
+                    "name": "Country of origin - latest year",
+                    "title": "Country of origin - latest year",
+                    "description": "",
+                    "type": "chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [
+                            "#country+origin"
+                        ],
+                        "valueColumns": [
+                            "#affected"
+                        ]
+                    }
+                },
+                {
+                    "name": "Country of asylum - latest year",
+                    "title": "Country of asylum - latest year",
+                    "description": "",
+                    "type": "chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [
+                            "#country+asylum"
+                        ],
+                        "valueColumns": [
+                            "#affected"
+                        ]
+                    }
+                },
+                {
+                    "name": "Resettlements by year",
+                    "title": "Resettlements by year",
+                    "description": "",
+                    "type": "chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "aggregateColumns": [
+                            "#date+year"
+                        ],
+                        "valueColumns": [
+                            "#affected"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
 }
