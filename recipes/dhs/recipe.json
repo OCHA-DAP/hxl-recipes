@@ -16,6 +16,11 @@
         "aggregateFunctions": [
           "sum"
         ],
+        "filtersWith": [
+        {
+          "#date+year": "$MAX$"
+        }
+        ],
         "aggregateColumns": [
           "#indicator+name"
         ],
