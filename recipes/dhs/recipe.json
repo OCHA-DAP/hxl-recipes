@@ -4,12 +4,12 @@
   "type": "cookbook",
   "default": true,
   "columns": [
-    "#adm1+name",
+    "#indicator+name",
     "#indicator+num"
   ],
   "recipes": [
     {
-      "name": "Charts: Indicator by adm1",
+      "name": "Charts: Indicator name by Indicator num",
       "description": "",
       "type": "chart",
       "ingredients": {
@@ -17,7 +17,7 @@
           "sum"
         ],
         "aggregateColumns": [
-          "#adm1+name"
+          "#indicator+name"
         ],
         "valueColumns": [
           "#indicator+num"
