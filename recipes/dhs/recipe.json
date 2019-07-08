@@ -13,7 +13,7 @@
     {
       "name": "Infant Mortality Rate",
       "title": "Infant Mortality Rate",
-      "description": "Infant Mortality Rate for 10 years preceding the survey",
+      "description": "Rate is for the period of 10 years preceding the survey",
       "type": "chart",
       "ingredients": {
         "aggregateFunctions": [
