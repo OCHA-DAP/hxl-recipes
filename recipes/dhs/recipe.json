@@ -1,6 +1,6 @@
 {
-  "name": "generic",
-  "title": "Generic",
+  "name": "DHS",
+  "title": "DHS",
   "type": "cookbook",
   "default": true,
   "columns": [
@@ -18,11 +18,12 @@
         ],
         "filtersWith": [
         {
-          "#date+year": "$MAX$"
+          "#date+year": "$MAX$",
+          "#indicator+id": "CM_ECMR_C_IMR"
         }
         ],
         "aggregateColumns": [
-          "#indicator+name"
+          "#adm1+name"
         ],
         "valueColumns": [
           "#indicator+num"
