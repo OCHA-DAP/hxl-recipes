@@ -11,8 +11,9 @@
   ],
   "recipes": [
     {
-      "name": "Charts: Indicator name by Indicator num",
-      "description": "lala",
+      "name": "Infant Mortality Rate",
+      "title": "Infant Mortality Rate",
+      "description": "Infant Mortality Rate for 10 years preceding the survey",
       "type": "chart",
       "ingredients": {
         "aggregateFunctions": [
@@ -33,6 +34,56 @@
           "#indicator+num"
         ]
       }
-    }
+    },
+    {
+      "name": "Households with Electricity",
+      "title": "Households with Electricity",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "filtersWith": [
+        {
+          "#date+year": "$MAX$"
+        },
+        {
+          "#indicator+id": "HC_ELEC_H_ELC"
+        }
+        ],
+        "aggregateColumns": [
+          "#adm1+name"
+        ],
+        "valueColumns": [
+          "#indicator+num"
+        ]
+      }
+    },
+    {
+      "name": "Women who are Literate",
+      "title": "Women who are Literate",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "filtersWith": [
+        {
+          "#date+year": "$MAX$"
+        },
+        {
+          "#indicator+id": "ED_LITR_W_LIT"
+        }
+        ],
+        "aggregateColumns": [
+          "#adm1+name"
+        ],
+        "valueColumns": [
+          "#indicator+num"
+        ]
+      }
+    }    
   ]
 }
