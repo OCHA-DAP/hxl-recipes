@@ -4,8 +4,6 @@
   "type": "cookbook",
   "default": true,
   "columns": [
-    "#indicator+name",
-    "#indicator+num"
   ],
   "recipes": [
     {
