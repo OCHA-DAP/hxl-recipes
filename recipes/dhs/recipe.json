@@ -12,7 +12,7 @@
   "recipes": [
     {
       "name": "Charts: Indicator name by Indicator num",
-      "description": "",
+      "description": "lala",
       "type": "chart",
       "ingredients": {
         "aggregateFunctions": [
