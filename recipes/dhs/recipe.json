@@ -4,6 +4,10 @@
   "type": "cookbook",
   "default": true,
   "columns": [
+    "#date+year",
+    "#indicator+id",
+    "#adm1+name",
+    "#indicator+num"
   ],
   "recipes": [
     {
