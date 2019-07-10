@@ -6,7 +6,7 @@
   "columns": [
     "#date+year",
     "#indicator+id",
-    "#adm1+name",
+    "#loc+name",
     "#indicator+num"
   ],
   "recipes": [
@@ -28,7 +28,7 @@
         }
         ],
         "aggregateColumns": [
-          "#adm1+name"
+          "#loc+name"
         ],
         "valueColumns": [
           "#indicator+num"
@@ -53,7 +53,7 @@
         }
         ],
         "aggregateColumns": [
-          "#adm1+name"
+          "#loc+name"
         ],
         "valueColumns": [
           "#indicator+num"
@@ -78,7 +78,7 @@
         }
         ],
         "aggregateColumns": [
-          "#adm1+name"
+          "#loc+name"
         ],
         "valueColumns": [
           "#indicator+num"
