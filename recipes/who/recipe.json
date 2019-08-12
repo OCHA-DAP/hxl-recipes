@@ -1,0 +1,35 @@
+{
+  "name": "WHO",
+  "title": "WHO",
+  "type": "cookbook",
+  "default": true,
+  "columns": [
+    "#date+year",
+    "#indicator+code",
+    "#indicator+value+num"
+  ],
+  "recipes": [
+    {
+      "name": "Infant Mortality Rate",
+      "title": "Infant Mortality Rate",
+      "description": "",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "filtersWith": [
+        {
+          "#indicator+code": "MDG_0000000001"
+        }
+        ],
+        "aggregateColumns": [
+          "#date+year"
+        ],
+        "valueColumns": [
+          "#indicator+value+num"
+        ]
+      }
+    }
+  ]
+}
