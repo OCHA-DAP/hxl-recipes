@@ -23,6 +23,7 @@
         }
         ],
         "aggregateColumns": [
+          "#indicator+code",
           "#date+year"
         ],
         "valueColumns": [
