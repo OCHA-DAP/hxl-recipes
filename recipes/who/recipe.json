@@ -5,8 +5,8 @@
   "columns": [
     "#date+year",
     "#indicator+code",
-    "#indicator+value+num",
-    "#sex+code"
+    "#sex+code",
+    "#indicator+value+num"
   ],
   "recipes": [
     {
@@ -24,8 +24,8 @@
         }
         ],
         "aggregateColumns": [
-          "#sex+code",
-          "#date+year"
+          "#date+year",
+          "#sex+code"
         ],
         "valueColumns": [
           "#indicator+value+num"
@@ -47,8 +47,8 @@
         }
         ],
         "aggregateColumns": [
-          "#sex+code",
-          "#date+year"
+          "#date+year",
+          "#sex+code"
         ],
         "valueColumns": [
           "#indicator+value+num"
