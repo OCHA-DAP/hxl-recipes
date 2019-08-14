@@ -43,7 +43,7 @@
         ],
         "filtersWith": [
         {
-          "#indicator+code": "WHOSIS_000001",
+          "#indicator+code": "WHOSIS_000001"
         }
         ],
         "aggregateColumns": [
