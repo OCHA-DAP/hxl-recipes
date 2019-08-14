@@ -5,13 +5,14 @@
   "columns": [
     "#date+year",
     "#indicator+code",
-    "#indicator+value+num"
+    "#indicator+value+num",
+    "#sex+code"
   ],
   "recipes": [
     {
       "name": "Infant Mortality Rate",
       "title": "Infant Mortality Rate",
-      "description": "",
+      "description": "Probability of dying between birth and age 1 per 1000 live births",
       "type": "timeseries",
       "ingredients": {
         "aggregateFunctions": [
@@ -19,7 +20,8 @@
         ],
         "filtersWith": [
         {
-          "#indicator+code": "MDG_0000000001"
+          "#indicator+code": "MDG_0000000001",
+          "#sex+code": "BTSX"
         }
         ],
         "aggregateColumns": [
@@ -41,7 +43,8 @@
         ],
         "filtersWith": [
         {
-          "#indicator+code": "WHOSIS_000001"
+          "#indicator+code": "WHOSIS_000001",
+          "#sex+code": "BTSX"
         }
         ],
         "aggregateColumns": [
@@ -55,7 +58,7 @@
     {
       "name": "Gov Health Expenditure",
       "title": "Per Capita Government Health Expenditure",
-      "description": "",
+      "description": "Per capita government expenditure on health at average exchange rate",
       "type": "timeseries",
       "ingredients": {
         "aggregateFunctions": [
