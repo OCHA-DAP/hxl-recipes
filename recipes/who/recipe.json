@@ -30,6 +30,52 @@
           "#indicator+value+num"
         ]
       }
+    },
+    {
+      "name": "Life Expectancy",
+      "title": "Life Expectancy at Birth",
+      "description": "",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "filtersWith": [
+        {
+          "#indicator+code": "WHOSIS_000001"
+        }
+        ],
+        "aggregateColumns": [
+          "#indicator+code",
+          "#date+year"
+        ],
+        "valueColumns": [
+          "#indicator+value+num"
+        ]
+      }
+    },
+    {
+      "name": "Gov Health Expenditure",
+      "title": "Per Capita Government Health Expenditure",
+      "description": "",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "filtersWith": [
+        {
+          "#indicator+code": "WHS7_104"
+        }
+        ],
+        "aggregateColumns": [
+          "#indicator+code",
+          "#date+year"
+        ],
+        "valueColumns": [
+          "#indicator+value+num"
+        ]
+      }
     }
   ]
 }
