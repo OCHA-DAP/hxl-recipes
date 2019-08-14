@@ -20,11 +20,11 @@
         ],
         "filtersWith": [
         {
-          "#indicator+code": "MDG_0000000001",
-          "#sex+code": "BTSX"
+          "#indicator+code": "MDG_0000000001"
         }
         ],
         "aggregateColumns": [
+          "#sex+code",
           "#date+year"
         ],
         "valueColumns": [
@@ -44,10 +44,10 @@
         "filtersWith": [
         {
           "#indicator+code": "WHOSIS_000001",
-          "#sex+code": "BTSX"
         }
         ],
         "aggregateColumns": [
+          "#sex+code",
           "#date+year"
         ],
         "valueColumns": [
