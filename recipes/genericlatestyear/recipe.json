@@ -83,7 +83,7 @@
     {
       "name": "Charts: Sum items for a tag grouped by administrative units",
       "description": "",
-      "type": "timeseries",
+      "type": "chart",
       "ingredients": {
         "aggregateFunctions": [
           "sum",
@@ -92,22 +92,6 @@
         "aggregateColumns": [
           "#date",
           "#country"
-        ],
-        "filtersWith": [
-          {
-            "#date+year": "$MAX$"
-          }
-        ],
-        "filtersWithout": [
-          {
-            "#region": "",
-            "#country": "",
-            "#adm1": "",
-            "#adm2": "",
-            "#adm3": "",
-            "#adm4": "",
-            "#adm5": ""
-          }
         ],
         "valueColumns": [
           "#affected",
