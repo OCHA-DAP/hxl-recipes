@@ -63,6 +63,17 @@
             "#date+year": "$MAX$"
           }
         ],
+        "filtersWithout": [
+          {
+            "#region": "",
+            "#country": "",
+            "#adm1": "",
+            "#adm2": "",
+            "#adm3": "",
+            "#adm4": "",
+            "#adm5": ""
+          }
+        ],
         "valueColumns": [
           "#affected",
           "#inneed"
@@ -85,6 +96,17 @@
         "filtersWith": [
           {
             "#date+year": "$MAX$"
+          }
+        ],
+        "filtersWithout": [
+          {
+            "#region": "",
+            "#country": "",
+            "#adm1": "",
+            "#adm2": "",
+            "#adm3": "",
+            "#adm4": "",
+            "#adm5": ""
           }
         ],
         "valueColumns": [
