@@ -1,0 +1,100 @@
+{
+  "name": "genericyear",
+  "title": "genericyear",
+  "type": "cookbook",
+  "columns": [
+    "#affected",
+    "#inneed",
+    "#reached",
+    "#targeted",
+    "#population",
+    "#country",
+    "#adm1",
+    "#adm2",
+    "#adm3",
+    "#adm4",
+    "#adm5",
+    "#date+year"
+  ],
+  "recipes": [
+    {
+      "name": "Key Figures: Sum/count items for a value column for latest year",
+      "description": "",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum",
+          "count"
+        ],
+        "filtersWith": [
+          {
+            "#date+year": "$MAX$"
+          }
+        ],
+        "valueColumns": [
+          "#affected",
+          "#inneed",
+          "#reached",
+          "#targeted",
+          "#population"
+        ]
+      }
+    },
+    {
+      "name": "Charts: Sum/count items for a value column grouped by aggregate columns for latest year",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum",
+          "count"
+        ],
+        "aggregateColumns": [
+          "#region",
+          "#country",
+          "#adm1",
+          "#adm2",
+          "#adm3",
+          "#adm4",
+          "#adm5"
+        ],
+        "filtersWith": [
+          {
+            "#date+year": "$MAX$"
+          }
+        ],
+        "valueColumns": [
+          "#affected",
+          "#inneed"
+        ]
+      }
+    },
+    {
+      "name": "Charts: Sum items for a tag grouped by administrative units",
+      "description": "",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum",
+          "count"
+        ],
+        "aggregateColumns": [
+          "#date",
+          "#country"
+        ],
+        "filtersWith": [
+          {
+            "#date+year": "$MAX$"
+          }
+        ],
+        "valueColumns": [
+          "#affected",
+          "#inneed",
+          "#reached",
+          "#targeted",
+          "#population"
+        ]
+      }
+    }
+  ]
+}
