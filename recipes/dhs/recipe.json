@@ -5,9 +5,9 @@
   "default": true,
   "columns": [
     "#date+year",
-    "#indicator+id",
+    "#indicator+code",
     "#loc+name",
-    "#indicator+num"
+    "#indicator+value+num"
   ],
   "recipes": [
     {
@@ -24,14 +24,14 @@
           "#date+year": "$MAX$"
         },
         {
-          "#indicator+id": "CM_ECMR_C_IMR"
+          "#indicator+code": "CM_ECMR_C_IMR"
         }
         ],
         "aggregateColumns": [
           "#loc+name"
         ],
         "valueColumns": [
-          "#indicator+num"
+          "#indicator+value+num"
         ]
       }
     },
@@ -49,14 +49,14 @@
           "#date+year": "$MAX$"
         },
         {
-          "#indicator+id": "HC_ELEC_H_ELC"
+          "#indicator+code": "HC_ELEC_H_ELC"
         }
         ],
         "aggregateColumns": [
           "#loc+name"
         ],
         "valueColumns": [
-          "#indicator+num"
+          "#indicator+value+num"
         ]
       }
     },
@@ -74,14 +74,14 @@
           "#date+year": "$MAX$"
         },
         {
-          "#indicator+id": "ED_LITR_W_LIT"
+          "#indicator+code": "ED_LITR_W_LIT"
         }
         ],
         "aggregateColumns": [
           "#loc+name"
         ],
         "valueColumns": [
-          "#indicator+num"
+          "#indicator+value+num"
         ]
       }
     }    
