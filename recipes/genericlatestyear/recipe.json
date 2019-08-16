@@ -11,10 +11,6 @@
     "#region",
     "#country",
     "#adm1",
-    "#adm2",
-    "#adm3",
-    "#adm4",
-    "#adm5",
     "#date+year"
   ],
   "recipes": [
@@ -54,33 +50,11 @@
           "#region",
           "#country",
           "#adm1",
-          "#adm2",
-          "#adm3",
-          "#adm4",
-          "#adm5"
         ],
         "filtersWithout": [
           {
-            "#region": ""
-          },
-          {
-            "#country": ""
-          },
-          {
             "#adm1": ""
           },
-          {
-            "#adm2": ""
-          },
-          {
-            "#adm3": ""
-          },
-          {
-            "#adm4": ""
-          },
-          {
-            "#adm5": ""
-          }
         ],
         "valueColumns": [
           "#affected",
