@@ -40,7 +40,7 @@
     {
       "name": "Charts: Sum/count items for a value column grouped by aggregate columns for latest year",
       "description": "",
-      "type": "chart",
+      "type": "timeseries",
       "ingredients": {
         "aggregateFunctions": [
           "sum",
