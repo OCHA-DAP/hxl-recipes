@@ -68,8 +68,7 @@
       "type": "timeseries",
       "ingredients": {
         "aggregateFunctions": [
-          "sum",
-          "count"
+          "sum"
         ],
         "aggregateColumns": [
           "#date",
