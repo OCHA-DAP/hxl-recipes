@@ -51,6 +51,11 @@
           "#country",
           "#adm1",
         ],
+        "filtersWith": [
+          {
+            "#date+year": "$MAX$"
+          }
+        ],
         "filtersWithout": [
           {
             "#adm1": ""
