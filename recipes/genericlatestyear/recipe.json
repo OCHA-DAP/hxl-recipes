@@ -36,6 +36,28 @@
           "#population"
         ]
       }
+    },
+    {
+      "name": "Charts: Sum items for a tag grouped by administrative units",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum",
+          "count"
+        ],
+        "aggregateColumns": [
+          "#date",
+          "#country"
+        ],
+        "valueColumns": [
+          "#affected",
+          "#inneed",
+          "#reached",
+          "#targeted",
+          "#population"
+        ]
+      }
     }
   ]
 }
