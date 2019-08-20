@@ -65,17 +65,22 @@
     {
       "name": "Charts: Sum items for a tag grouped by administrative units",
       "description": "",
-      "type": "timeseries",
+      "type": "chart",
       "ingredients": {
         "aggregateFunctions": [
-          "sum"
+          "sum",
+          "count"
         ],
         "aggregateColumns": [
           "#date",
           "#country"
         ],
         "valueColumns": [
-          "#affected"
+          "#affected",
+          "#inneed",
+          "#reached",
+          "#targeted",
+          "#population"
         ]
       }
     }
