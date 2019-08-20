@@ -40,10 +40,11 @@
     {
       "name": "Charts: Sum/count items for a value column grouped by aggregate columns for latest year",
       "description": "",
-      "type": "timeseries",
+      "type": "chart",
       "ingredients": {
         "aggregateFunctions": [
-          "sum"
+          "sum",
+          "count"
         ],
         "aggregateColumns": [
           "#region",
@@ -64,7 +65,7 @@
     {
       "name": "Charts: Sum items for a tag grouped by administrative units",
       "description": "",
-      "type": "chart",
+      "type": "timeseries",
       "ingredients": {
         "aggregateFunctions": [
           "sum",
