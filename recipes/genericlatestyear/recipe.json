@@ -76,11 +76,7 @@
           "#country"
         ],
         "valueColumns": [
-          "#affected",
-          "#inneed",
-          "#reached",
-          "#targeted",
-          "#population"
+          "#affected"
         ]
       }
     }
