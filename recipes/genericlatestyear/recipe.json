@@ -41,6 +41,9 @@
       "name": "Charts: Sum/count items for a value column for each year",
       "description": "",
       "type": "chart",
+      "options": {
+        "forcedChartType": "bar"
+      },
       "ingredients": {
         "aggregateFunctions": [
           "sum",
@@ -62,6 +65,9 @@
       "name": "Charts: Sum/count items for a value column grouped by adm1 for latest year",
       "description": "",
       "type": "chart",
+      "options": {
+        "forcedChartType": "bar"
+      },
       "ingredients": {
         "aggregateFunctions": [
           "sum",
