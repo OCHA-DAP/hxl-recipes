@@ -27,7 +27,7 @@
           "#date"
         ],
         "valueColumns": [
-          "#value"
+          "#indicator+value+num"
         ]
       }
     }
