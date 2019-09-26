@@ -1,0 +1,35 @@
+{
+  "name": "historicvalues",
+  "title": "Historic Indicator Values",
+  "type": "cookbook",
+  "columns": [
+    "#date",
+    "#indicator+name",
+    "#indicator+code",
+    "#indicator+value+num"
+  ],
+  "recipes": [
+    {
+      "name": "Values for indicator",
+      "description": "",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "filtersWith": [
+          {
+            "#indicator+code": "AG.AGR.TRAC.NO"
+          }
+        ],
+        "aggregateColumns": [
+          "#indicator+name",
+          "#date"
+        ],
+        "valueColumns": [
+          "#value"
+        ]
+      }
+    }
+  ]
+}
