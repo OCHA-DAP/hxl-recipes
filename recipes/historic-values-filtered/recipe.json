@@ -30,6 +30,50 @@
           "#indicator+value+num"
         ]
       }
+    },
+    {
+      "name": "Values for indicator",
+      "description": "",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "filtersWith": [
+          {
+            "#indicator+code": "AG.CON.FERT.PT.ZS"
+          }
+        ],
+        "aggregateColumns": [
+          "#indicator+name",
+          "#date"
+        ],
+        "valueColumns": [
+          "#indicator+value+num"
+        ]
+      }
+    },
+    {
+      "name": "Values for indicator",
+      "description": "",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "filtersWith": [
+          {
+            "#indicator+code": "AG.CON.FERT.ZS"
+          }
+        ],
+        "aggregateColumns": [
+          "#indicator+name",
+          "#date"
+        ],
+        "valueColumns": [
+          "#indicator+value+num"
+        ]
+      }
     }
   ]
 }
