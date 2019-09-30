@@ -1,0 +1,36 @@
+{
+  "name": "foodsecurity",
+  "title": "Food Security Values",
+  "type": "cookbook",
+  "columns": [
+    "#loc+name",
+    "#indicator+code",
+    "#indicator+value+num"
+  ],
+  "recipes": [
+    {
+      "name": "Food consumption score",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "filtersWith": [
+          {
+            "#indicator+code": "FCS"
+          },
+          {
+            "#category": ""
+          }
+        ],
+        "aggregateColumns": [
+          "#loc+name"
+        ],
+        "valueColumns": [
+          "#indicator+value+num"
+        ]
+      }
+    }
+  ]
+}
