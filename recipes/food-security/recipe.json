@@ -21,7 +21,7 @@
             "#indicator+code": "FCS"
           },
           {
-            "#category": ""
+            "#category": null
           }
         ],
         "aggregateColumns": [
