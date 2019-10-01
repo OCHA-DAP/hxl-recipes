@@ -16,7 +16,7 @@
       "type": "chart",
       "ingredients": {
         "aggregateFunctions": [
-          "avg"
+          "average"
         ],
         "filtersWith": [
           {
@@ -40,7 +40,7 @@
       "type": "chart",
       "ingredients": {
         "aggregateFunctions": [
-          "avg"
+          "average"
         ],
         "filtersWith": [
           {
@@ -64,7 +64,7 @@
       "type": "chart",
       "ingredients": {
         "aggregateFunctions": [
-          "avg"
+          "average"
         ],
         "filtersWith": [
           {
