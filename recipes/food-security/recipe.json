@@ -11,12 +11,12 @@
   ],
   "recipes": [
     {
-      "name": "Food conaverageption score",
+      "name": "Food consumption score",
       "description": "",
       "type": "chart",
       "ingredients": {
         "aggregateFunctions": [
-          "average"
+          "sum"
         ],
         "filtersWith": [
           {
@@ -40,7 +40,7 @@
       "type": "chart",
       "ingredients": {
         "aggregateFunctions": [
-          "average"
+          "sum"
         ],
         "filtersWith": [
           {
@@ -64,7 +64,7 @@
       "type": "chart",
       "ingredients": {
         "aggregateFunctions": [
-          "average"
+          "sum"
         ],
         "filtersWith": [
           {
