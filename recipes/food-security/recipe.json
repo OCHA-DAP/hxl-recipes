@@ -21,7 +21,10 @@
             "#indicator+code": "FCS"
           },
           {
-            "#category": null
+            "#date": "$MAX$"
+          },
+          {
+            "#category": "is empty"
           }
         ],
         "aggregateColumns": [
