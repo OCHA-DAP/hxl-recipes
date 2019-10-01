@@ -11,12 +11,12 @@
   ],
   "recipes": [
     {
-      "name": "Food consumption score",
+      "name": "Food conaverageption score",
       "description": "",
       "type": "chart",
       "ingredients": {
         "aggregateFunctions": [
-          "sum"
+          "average"
         ],
         "filtersWith": [
           {
@@ -27,7 +27,54 @@
           }
         ],
         "aggregateColumns": [
-          "#loc+name",
+          "#category"
+        ],
+        "valueColumns": [
+          "#indicator+value+num"
+        ]
+      }
+    },
+    {
+      "name": "Reduced coping strategy",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "average"
+        ],
+        "filtersWith": [
+          {
+            "#indicator+code": "rCSI"
+          },
+          {
+            "#date": "$MAX$"
+          }
+        ],
+        "aggregateColumns": [
+          "#category"
+        ],
+        "valueColumns": [
+          "#indicator+value+num"
+        ]
+      }
+    },
+    {
+      "name": "Proteins",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "average"
+        ],
+        "filtersWith": [
+          {
+            "#indicator+code": "Proteins"
+          },
+          {
+            "#date": "$MAX$"
+          }
+        ],
+        "aggregateColumns": [
           "#category"
         ],
         "valueColumns": [
