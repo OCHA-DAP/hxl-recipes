@@ -4,6 +4,8 @@
   "type": "cookbook",
   "columns": [
     "#loc+name",
+    "#date",
+    "#category",
     "#indicator+code",
     "#indicator+value+num"
   ],
@@ -22,13 +24,11 @@
           },
           {
             "#date": "$MAX$"
-          },
-          {
-            "#category": "is empty"
           }
         ],
         "aggregateColumns": [
-          "#loc+name"
+          "#loc+name",
+          "#category"
         ],
         "valueColumns": [
           "#indicator+value+num"
