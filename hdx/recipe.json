@@ -4,48 +4,137 @@
   "type": "cookbook",
   "default": true,
   "columns": [
-    "#affected",
-    "#inneed",
-    "#reached",
-    "#targeted",
-    "#population",
-    "#country",
+    "#activity",
     "#adm1",
     "#adm2",
     "#adm3",
     "#adm4",
     "#adm5",
-    "#date+year"
+    "#affected",
+    "#beneficiary",
+    "#cause",
+    "#channel",
+    "#country",
+    "#crisis",
+    "#date",
+    "#event",
+    "#group",
+    "#indicator",
+    "#inneed",
+    "#item",
+    "#loc",
+    "#modality",
+    "#need",
+    "#org",
+    "#output",
+    "#population",
+    "#reached",
+    "#region",
+    "#sector",
+    "#service",
+    "#severity",
+    "#subsector",
+    "#targeted",
+    "#value"
   ],
   "recipes": [
     {
-      "name": "Charts: Sum/count items for a value column grouped by aggregate columns",
+      "name": "Charts: Sum all values for a value column grouped by an aggregate column",
       "description": "",
       "type": "chart",
       "ingredients": {
         "aggregateFunctions": [
-          "sum",
-          "count"
+          "sum"
         ],
         "aggregateColumns": [
+          "#region",
           "#country",
           "#adm1",
           "#adm2",
           "#adm3",
           "#adm4",
-          "#adm5"
+          "#adm5",
+          "#date+year",
+          "#date+month",
+          "#date+week",
+          "#loc",
+          "#org",
+          "#sector",
+          "#subsector",
+          "#beneficiary",
+          "#item",
+          "#need",
+          "#service",
+          "#channel",
+          "#modality",
+          "#cause",
+          "#crisis",
+          "#event",
+          "#group",
+          "#severity",
+          "#*+code",
+          "#*+name",
+          "#indicator-num-pct"
         ],
         "valueColumns": [
+          "#population",
           "#affected",
           "#inneed",
           "#reached",
           "#targeted",
-          "#population"
+          "#value",
+          "#output+num",
+          "#indicator+num",
+          "#*+num"
         ]
       }
     },
     {
-      "name": "Charts: Distinct count of values in value column by the aggregate column",
+      "name": "Charts: Count all (not unique) values in the value column grouped by the aggregate column",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "count"
+        ],
+        "aggregateColumns": [
+          "#region",
+          "#country",
+          "#adm1",
+          "#adm2",
+          "#adm3",
+          "#adm4",
+          "#adm5",
+          "#date+year",
+          "#date+month",
+          "#date+week",
+          "#loc",
+          "#org",
+          "#sector",
+          "#subsector",
+          "#beneficiary",
+          "#item",
+          "#need",
+          "#service",
+          "#channel",
+          "#modality",
+          "#cause",
+          "#crisis",
+          "#event",
+          "#group",
+          "#severity",
+          "#*+code",
+          "#*+name",
+          "#indicator-num-pct"
+        ],
+        "valueColumns": [
+          "#activity",
+          "#respondee"
+        ]
+      }
+    },
+    {
+      "name": "Charts: count unique values in the value column grouped by the aggregate column",
       "description": "",
       "type": "chart",
       "ingredients": {
@@ -53,50 +142,257 @@
           "distinct-count"
         ],
         "aggregateColumns": [
-          "#country"
+          "#region",
+          "#country",
+          "#adm1",
+          "#adm2",
+          "#adm3",
+          "#adm4",
+          "#adm5",
+          "#date+year",
+          "#date+month",
+          "#date+week",
+          "#loc",
+          "#org",
+          "#sector",
+          "#subsector",
+          "#beneficiary",
+          "#item",
+          "#need",
+          "#service",
+          "#channel",
+          "#modality",
+          "#cause",
+          "#crisis",
+          "#event",
+          "#group",
+          "#severity",
+          "#*+code",
+          "#*+name",
+          "#indicator-num-pct"
         ],
         "valueColumns": [
-          "#adm1"
+          "#date",
+          "#sector",
+          "#subsector",
+          "#org",
+          "#beneficiary",
+          "#region",
+          "#country",
+          "#adm1",
+          "#adm2",
+          "#adm3",
+          "#adm4",
+          "#adm5",
+          "#loc",
+          "#channel",
+          "#cause",
+          "#event",
+          "#group",
+          "#modality",
+          "#indicator-num-pct",
+          "#need",
+          "#service",
+          "#output-num",
+          "#*+name",
+          "#*+code",
+          "#*+type"
         ]
       }
     },
     {
-      "name": "Charts: Sum items for a tag grouped by administrative units",
+      "name": "Charts: Sum items for a tag grouped by another column",
       "description": "",
       "type": "timeseries",
       "ingredients": {
         "aggregateFunctions": [
-          "sum",
-          "count"
+          "sum"
         ],
         "aggregateColumns": [
           "#date",
-          "#country"
+          "#region",
+          "#country",
+          "#adm1",
+          "#adm2",
+          "#adm3",
+          "#adm4",
+          "#adm5",
+          "#date+year",
+          "#date+month",
+          "#date+week",
+          "#loc",
+          "#org",
+          "#sector",
+          "#subsector",
+          "#beneficiary",
+          "#item",
+          "#need",
+          "#service",
+          "#channel",
+          "#modality",
+          "#cause",
+          "#crisis",
+          "#event",
+          "#group",
+          "#severity",
+          "#*+code",
+          "#*+name",
+          "#indicator-num-pct"
         ],
         "valueColumns": [
+          "#population",
           "#affected",
           "#inneed",
           "#reached",
           "#targeted",
-          "#population"
+          "#value",
+          "#output+num",
+          "#indicator+num",
+          "#*+num"
         ]
       }
     },
     {
-      "name": "Key Figures: Sum/count items for a value column",
+      "name": "Charts: count (non-unique) items for a tag grouped by another column",
+      "description": "",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "count"
+        ],
+        "aggregateColumns": [
+          "#date",
+          "#region",
+          "#country",
+          "#adm1",
+          "#adm2",
+          "#adm3",
+          "#adm4",
+          "#adm5",
+          "#loc",
+          "#org",
+          "#sector",
+          "#subsector",
+          "#beneficiary",
+          "#item",
+          "#need",
+          "#service",
+          "#channel",
+          "#modality",
+          "#cause",
+          "#crisis",
+          "#event",
+          "#group",
+          "#severity",
+          "#*+code",
+          "#*+name",
+          "#indicator-num-pct"
+        ],
+        "valueColumns": [
+          "#activity",
+          "#respondee"
+        ]
+      }
+    },
+    {
+      "name": "Charts: count unique values in the value column grouped by the aggregate column",
+      "description": "",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "distinct-count"
+        ],
+        "aggregateColumns": [
+          "#date",
+          "#region",
+          "#country",
+          "#adm1",
+          "#adm2",
+          "#adm3",
+          "#adm4",
+          "#adm5",
+          "#date+year",
+          "#date+month",
+          "#date+week",
+          "#loc",
+          "#org",
+          "#sector",
+          "#subsector",
+          "#beneficiary",
+          "#item",
+          "#need",
+          "#service",
+          "#channel",
+          "#modality",
+          "#cause",
+          "#crisis",
+          "#event",
+          "#group",
+          "#severity",
+          "#*+code",
+          "#*+name",
+          "#indicator-num-pct"
+        ],
+        "valueColumns": [
+          "#sector",
+          "#subsector",
+          "#org",
+          "#beneficiary",
+          "#region",
+          "#country",
+          "#adm1",
+          "#adm2",
+          "#adm3",
+          "#adm4",
+          "#adm5",
+          "#loc",
+          "#channel",
+          "#cause",
+          "#event",
+          "#group",
+          "#modality",
+          "#indicator-num-pct",
+          "#need",
+          "#service",
+          "#output-num",
+          "#*+name",
+          "#*+code",
+          "#*+type"
+        ]
+      }
+    },    
+    {
+      "name": "Key Figures: Sum items for a value column",
       "description": "",
       "type": "key figure",
       "ingredients": {
         "aggregateFunctions": [
-          "sum",
-          "count"
+          "sum"
         ],
         "valueColumns": [
+          "#population",
           "#affected",
           "#inneed",
           "#reached",
           "#targeted",
-          "#population"
+          "#value",
+          "#output+num",
+          "#indicator+num",
+          "#*+num"
+        ]
+      }
+    },
+    {
+      "name": "Key Figures: non-unique count of values in a column",
+      "description": "",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "count"
+        ],
+        "valueColumns": [
+          "#activity",
+          "#respondee"
         ]
       }
     },
@@ -109,8 +405,31 @@
           "distinct-count"
         ],
         "valueColumns": [
+          "#date",
+          "#sector",
+          "#subsector",
+          "#org",
+          "#beneficiary",
+          "#region",
           "#country",
-          "#adm1"
+          "#adm1",
+          "#adm2",
+          "#adm3",
+          "#adm4",
+          "#adm5",
+          "#loc",
+          "#channel",
+          "#cause",
+          "#event",
+          "#group",
+          "#modality",
+          "#indicator-num-pct",
+          "#need",
+          "#service",
+          "#output-num",
+          "#*+name",
+          "#*+code",
+          "#*+type"
         ]
       }
     }
