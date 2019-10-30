@@ -1,0 +1,86 @@
+{
+  "name": "foodsecurity",
+  "title": "Food Security Values",
+  "type": "cookbook",
+  "columns": [
+    "#loc+name",
+    "#date",
+    "#category",
+    "#indicator+code",
+    "#indicator+value+num"
+  ],
+  "recipes": [
+    {
+      "name": "Reduced coping strategy",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "average"
+        ],
+        "filtersWith": [
+          {
+            "#indicator+code": "rCSI"
+          },
+          {
+            "#date": "$MAX$"
+          }
+        ],
+        "aggregateColumns": [
+          "#category"
+        ],
+        "valueColumns": [
+          "#indicator+value+num"
+        ]
+      }
+    },
+    {
+      "name": "Food consumption score",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "average"
+        ],
+        "filtersWith": [
+          {
+            "#indicator+code": "FCS"
+          },
+          {
+            "#date": "$MAX$"
+          }
+        ],
+        "aggregateColumns": [
+          "#category"
+        ],
+        "valueColumns": [
+          "#indicator+value+num"
+        ]
+      }
+    },
+    {
+      "name": "Proteins",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "average"
+        ],
+        "filtersWith": [
+          {
+            "#indicator+code": "Proteins"
+          },
+          {
+            "#date": "$MAX$"
+          }
+        ],
+        "aggregateColumns": [
+          "#category"
+        ],
+        "valueColumns": [
+          "#indicator+value+num"
+        ]
+      }
+    }
+  ]
+}
