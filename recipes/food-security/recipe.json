@@ -11,7 +11,7 @@
   ],
   "recipes": [
     {
-      "name": "Food consumption score",
+      "name": "Reduced coping strategy",
       "description": "",
       "type": "chart",
       "ingredients": {
@@ -20,7 +20,7 @@
         ],
         "filtersWith": [
           {
-            "#indicator+code": "FCS"
+            "#indicator+code": "rCSI"
           },
           {
             "#date": "$MAX$"
@@ -35,7 +35,7 @@
       }
     },
     {
-      "name": "Reduced coping strategy",
+      "name": "Food consumption score",
       "description": "",
       "type": "chart",
       "ingredients": {
@@ -44,7 +44,7 @@
         ],
         "filtersWith": [
           {
-            "#indicator+code": "rCSI"
+            "#indicator+code": "FCS"
           },
           {
             "#date": "$MAX$"
