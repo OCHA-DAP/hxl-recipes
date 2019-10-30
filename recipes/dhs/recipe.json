@@ -1,0 +1,89 @@
+{
+  "name": "DHS",
+  "title": "DHS",
+  "type": "cookbook",
+  "default": true,
+  "columns": [
+    "#date+year",
+    "#indicator+code",
+    "#loc+name",
+    "#indicator+value+num"
+  ],
+  "recipes": [
+    {
+      "name": "Infant Mortality Rate",
+      "title": "Infant Mortality Rate",
+      "description": "Rate is for the period of 10 years preceding the survey",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "filtersWith": [
+        {
+          "#date+year": "$MAX$"
+        },
+        {
+          "#indicator+code": "CM_ECMR_C_IMR"
+        }
+        ],
+        "aggregateColumns": [
+          "#loc+name"
+        ],
+        "valueColumns": [
+          "#indicator+value+num"
+        ]
+      }
+    },
+    {
+      "name": "Households with Electricity",
+      "title": "Households with Electricity",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "filtersWith": [
+        {
+          "#date+year": "$MAX$"
+        },
+        {
+          "#indicator+code": "HC_ELEC_H_ELC"
+        }
+        ],
+        "aggregateColumns": [
+          "#loc+name"
+        ],
+        "valueColumns": [
+          "#indicator+value+num"
+        ]
+      }
+    },
+    {
+      "name": "Women who are Literate",
+      "title": "Women who are Literate",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "filtersWith": [
+        {
+          "#date+year": "$MAX$"
+        },
+        {
+          "#indicator+code": "ED_LITR_W_LIT"
+        }
+        ],
+        "aggregateColumns": [
+          "#loc+name"
+        ],
+        "valueColumns": [
+          "#indicator+value+num"
+        ]
+      }
+    }    
+  ]
+}
