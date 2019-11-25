@@ -15,7 +15,17 @@
     "#adm3",
     "#adm4",
     "#adm5",
-    "#date+year"
+    "#date+year",
+    "#date+month",
+    "#date+week",
+    "#region",
+    "#loc",
+    "#org",
+    "#sector",
+    "#indicator",
+    "#value",
+    "#activity",
+    "#item"
   ],
   "recipes": [
     {
@@ -33,14 +43,21 @@
           "#adm2",
           "#adm3",
           "#adm4",
-          "#adm5"
+          "#adm5",
+          "#region",
+          "#loc",
+          "#org",
+          "#sector"
         ],
         "valueColumns": [
           "#affected",
           "#inneed",
           "#reached",
           "#targeted",
-          "#population"
+          "#population",
+          "#indicator",
+          "#value",
+          "#activity"
         ]
       }
     },
@@ -71,14 +88,25 @@
         ],
         "aggregateColumns": [
           "#date",
-          "#country"
+          "#country",
+          "#adm1",
+          "#adm2",
+          "#adm3",
+          "#adm4",
+          "#adm5",
+          "#loc",
+          "#org",
+          "#sector"
         ],
         "valueColumns": [
           "#affected",
           "#inneed",
           "#reached",
           "#targeted",
-          "#population"
+          "#population",
+          "#indicator",
+          "#value",
+          "#activity"
         ]
       }
     },
@@ -96,7 +124,10 @@
           "#inneed",
           "#reached",
           "#targeted",
-          "#population"
+          "#population",
+          "#indicator",
+          "#value",
+          "#activity"
         ]
       }
     },
@@ -110,7 +141,11 @@
         ],
         "valueColumns": [
           "#country",
-          "#adm1"
+          "#adm1",
+          "#indicator",
+          "#org",
+          "#sector",
+          "#item"
         ]
       }
     }
