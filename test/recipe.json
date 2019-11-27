@@ -1,0 +1,29 @@
+{
+  "name": "generic",
+  "title": "Generic",
+  "type": "cookbook",
+  "default": true,
+  "columns": [
+    "#adm1+name",
+    "#indicator+num"
+  ],
+  "recipes": [
+    {
+      "name": "Charts: Indicator by adm1",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#adm1+name"
+        ],
+        "valueColumns": [
+          "#indicator+num"
+        ]
+      }
+    }
+  ]
+}
+

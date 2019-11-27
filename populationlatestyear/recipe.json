@@ -1,6 +1,6 @@
 {
-  "name": "genericyear",
-  "title": "genericyear",
+  "name": "populationlatestyear",
+  "title": "Population Latest Year",
   "type": "cookbook",
   "columns": [
     "#affected",
