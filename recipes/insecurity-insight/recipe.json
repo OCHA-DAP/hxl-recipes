@@ -1,0 +1,97 @@
+{
+  "name": "insecurity-insight",
+  "title": "Insecurity Insight",
+  "type": "cookbook",
+  "default": false,
+  "columns": [
+    "#country",
+    "#adm1",
+    "#indicator",
+    "#event",
+    "#date",
+    "#affected",
+    "#impact",
+    "#group"
+  ],
+  "recipes": [
+    {
+      "name": "Chart numbers of affected people or events against different aggregators.",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#country+name",
+          "#adm1+name",
+          "#date+month",
+          "#event+type",
+          "#event+context",
+          "#impact+type"
+        ],
+        "valueColumns": [
+          "#affected",
+          "#indicator+num"
+        ]
+      }
+    },
+    {
+      "name": "Count contexts, event types, or groups against different aggregators",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "count"
+        ],
+        "aggregateColumns": [
+          "#country+name",
+          "#adm1+name",
+          "#date+month"
+        ],
+        "valueColumns": [
+          "#event+type",
+          "#event+context",
+          "#group"
+        ]
+      }
+    },
+    {
+      "name": "Timeseries: sum affected people or events grouped by administrative units",
+      "description": "",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum",
+          "count"
+        ],
+        "aggregateColumns": [
+          "#date",
+          "#country",
+          "#adm1"
+        ],
+        "valueColumns": [
+          "#affected",
+          "#indicator+num"
+        ]
+      }
+    },
+    {
+      "name": "Key Figures: Sum/count items",
+      "description": "",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum",
+          "count"
+        ],
+        "valueColumns": [
+          "#affected",
+          "#indicator+num",
+          "#event+context",
+          "#event+type"
+        ]
+      }
+    }
+  ]
+}
