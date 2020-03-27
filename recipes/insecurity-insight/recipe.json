@@ -4,7 +4,6 @@
   "type": "cookbook",
   "default": false,
   "columns": [
-    "#country",
     "#adm1",
     "#indicator",
     "#event",
@@ -23,7 +22,6 @@
           "sum"
         ],
         "aggregateColumns": [
-          "#country+name",
           "#adm1+name",
           "#date+month",
           "#event+type",
@@ -45,7 +43,6 @@
           "count"
         ],
         "aggregateColumns": [
-          "#country+name",
           "#adm1+name",
           "#date+month"
         ],
@@ -67,7 +64,6 @@
         ],
         "aggregateColumns": [
           "#date",
-          "#country",
           "#adm1"
         ],
         "valueColumns": [
