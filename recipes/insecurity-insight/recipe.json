@@ -23,8 +23,6 @@
         ],
         "aggregateColumns": [
           "#adm1+name",
-          "#date+month",
-          "#event+type",
           "#event+context",
           "#impact+type"
         ],
@@ -44,9 +42,7 @@
         ],
         "aggregateColumns": [
           "#adm1+name",
-          "#date+month"
-        ],
-        "valueColumns": [
+          "#date+month",
           "#event+type",
           "#event+context",
           "#group"
@@ -54,17 +50,12 @@
       }
     },
     {
-      "name": "Timeseries: sum affected people or events grouped by administrative units",
+      "name": "Key Figures: Sum items",
       "description": "",
-      "type": "timeseries",
+      "type": "key figure",
       "ingredients": {
         "aggregateFunctions": [
-          "sum",
-          "count"
-        ],
-        "aggregateColumns": [
-          "#date",
-          "#adm1"
+          "sum"
         ],
         "valueColumns": [
           "#affected",
@@ -73,19 +64,12 @@
       }
     },
     {
-      "name": "Key Figures: Sum/count items",
+      "name": "Key Figures: Count items",
       "description": "",
       "type": "key figure",
       "ingredients": {
         "aggregateFunctions": [
-          "sum",
           "count"
-        ],
-        "valueColumns": [
-          "#affected",
-          "#indicator+num",
-          "#event+context",
-          "#event+type"
         ]
       }
     }
