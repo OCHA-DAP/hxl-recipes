@@ -36,6 +36,9 @@
         "aggregateFunctions": [
           "sum"
         ],
+        "aggregateColumns": [
+          "#country+asylum"
+        ],
         "valueColumns": [
           "#affected+displaced+stateless+incoming"
         ],
@@ -56,6 +59,9 @@
       "ingredients": {
         "aggregateFunctions": [
           "sum"
+        ],
+        "aggregateColumns": [
+          "#country+origin"
         ],
         "valueColumns": [
           "#affected+displaced+stateless+outgoing"
