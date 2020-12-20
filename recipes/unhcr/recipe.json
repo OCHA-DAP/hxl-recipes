@@ -18,6 +18,7 @@
           "sum"
         ],
         "aggregateColumns": [
+          "#country+origin",
           "#date+year"
         ],
         "valueColumns": [
