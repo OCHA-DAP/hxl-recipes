@@ -1,0 +1,71 @@
+{
+  "name": "UNHCR",
+  "title": "UNHCR - forcibly displaced persons and stateless persons",
+  "type": "cookbook",
+  "columns": [
+    "#date",
+    "#affected+displaced+outgoing",
+    "#affected+displaced+stateless+incoming",
+    "#affected+displaced+stateless+outgoing"
+  ],
+  "recipes": [
+    {
+      "name": "People displaced across borders from ",
+      "description": "Includes refugees, asylum-seekers and Venezuelans displaced abroad.",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#date+year"
+        ],
+        "valueColumns": [
+          "#affected+displaced+outgoing"
+        ]
+      }
+    },
+    {
+      "name": "Forcibly displaced and stateless persons within",
+      "description": "Includes refugees, asylum-seekers, internally displaced persons, Venezuelans displaced abroad and stateless persons.",
+      "type": "chart",
+      "options": {
+        "forcedChartType": "bar"
+      },
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "valueColumns": [
+          "#affected+displaced+stateless+incoming"
+        ],
+        "filtersWith": [
+          {
+            "#date+year": "$MAX$"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Forcibly displaced and stateless persons from",
+      "description": "Includes refugees, asylum-seekers, internally displaced persons, Venezuelans displaced abroad and stateless persons.",
+      "type": "chart",
+      "options": {
+        "forcedChartType": "bar"
+      },
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "valueColumns": [
+          "#affected+displaced+stateless+outgoing"
+        ],
+        "filtersWith": [
+          {
+            "#date+year": "$MAX$"
+          }
+        ]
+      }
+    }
+  ]
+}
