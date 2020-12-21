@@ -44,14 +44,15 @@
           "sum"
         ],
         "aggregateColumns": [
-          "#country+name+asylum"
+          "#country+name+origin"
         ],
         "valueColumns": [
           "#affected+displaced+stateless+incoming"
         ],
         "filtersWith": [
           {
-            "#date+year": "$MAX$"
+            "#date+year": "$MAX$",
+            "#country+name+asylum": "AFG"
           }
         ]
       }
@@ -68,14 +69,15 @@
           "sum"
         ],
         "aggregateColumns": [
-          "#country+name+origin"
+          "#country+name+asylum"
         ],
         "valueColumns": [
           "#affected+displaced+stateless+outgoing"
         ],
         "filtersWith": [
           {
-            "#date+year": "$MAX$"
+            "#date+year": "$MAX$",
+            "#country+name+origin": "AFG"
           }
         ]
       }
