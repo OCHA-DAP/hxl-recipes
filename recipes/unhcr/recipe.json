@@ -12,7 +12,7 @@
   ],
   "recipes": [
     {
-      "name": "People displaced across borders from ",
+      "name": "People displaced across borders from",
       "description": "Includes refugees, asylum-seekers and Venezuelans displaced abroad.",
       "type": "timeseries",
       "ingredients": {
@@ -24,6 +24,11 @@
         ],
         "valueColumns": [
           "#affected+displaced+outgoing"
+        ],
+        "filtersWith": [
+          {
+            "#country+code+origin": "AFG"
+          }
         ]
       }
     },
