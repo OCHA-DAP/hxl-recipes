@@ -3,8 +3,8 @@
   "title": "UNHCR - forcibly displaced persons and stateless persons",
   "type": "cookbook",
   "columns": [
-    "#country+code+asylum",
-    "#country+code+origin",
+    "#country+name+asylum",
+    "#country+name+origin",
     "#date",
     "#affected+displaced+outgoing",
     "#affected+displaced+stateless+incoming",
@@ -39,7 +39,7 @@
           "sum"
         ],
         "aggregateColumns": [
-          "#country+code+asylum"
+          "#country+name+asylum"
         ],
         "valueColumns": [
           "#affected+displaced+stateless+incoming"
@@ -63,7 +63,7 @@
           "sum"
         ],
         "aggregateColumns": [
-          "#country+code+origin"
+          "#country+name+origin"
         ],
         "valueColumns": [
           "#affected+displaced+stateless+outgoing"
