@@ -3,6 +3,8 @@
   "title": "UNHCR - forcibly displaced persons and stateless persons",
   "type": "cookbook",
   "columns": [
+    "#country+code+asylum",
+    "#country+code+origin",
     "#country+name+asylum",
     "#country+name+origin",
     "#date",
@@ -52,7 +54,7 @@
         "filtersWith": [
           {
             "#date+year": "$MAX$",
-            "#country+name+asylum": "AFG"
+            "#country+code+asylum": "AFG"
           }
         ]
       }
@@ -77,7 +79,7 @@
         "filtersWith": [
           {
             "#date+year": "$MAX$",
-            "#country+name+origin": "AFG"
+            "#country+code+origin": "AFG"
           }
         ]
       }
