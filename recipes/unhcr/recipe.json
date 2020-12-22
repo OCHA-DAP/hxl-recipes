@@ -14,7 +14,7 @@
   ],
   "recipes": [
     {
-      "name": "People displaced across borders from",
+      "name": "People displaced across borders from Afghanistan",
       "description": "Includes refugees, asylum-seekers and Venezuelans displaced abroad.",
       "type": "timeseries",
       "ingredients": {
@@ -35,7 +35,7 @@
       }
     },
     {
-      "name": "Forcibly displaced and stateless persons within",
+      "name": "Forcibly displaced and stateless persons within Afghanistan",
       "description": "Includes refugees, asylum-seekers, internally displaced persons, Venezuelans displaced abroad and stateless persons.",
       "type": "chart",
       "options": {
@@ -62,7 +62,7 @@
       }
     },
     {
-      "name": "Forcibly displaced and stateless persons from",
+      "name": "Forcibly displaced and stateless persons from Afghanistan",
       "description": "Includes refugees, asylum-seekers, internally displaced persons, Venezuelans displaced abroad and stateless persons.",
       "type": "chart",
       "options": {
