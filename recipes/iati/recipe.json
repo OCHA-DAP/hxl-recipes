@@ -49,7 +49,7 @@
           "distinct-count"
         ],
         "aggregateColumns": [
-          "#sector"
+          "#sector+name"
         ],
         "valueColumns": [
           "#activity+id"
