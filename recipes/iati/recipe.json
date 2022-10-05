@@ -5,7 +5,9 @@
   "columns": [
     "#activity+id",
     "#sector",
-    "#org+reporting+name"
+    "#subsector",
+    "#org+reporting+name",
+    "#loc+name"
   ],
   "recipes": [
     {
@@ -15,7 +17,7 @@
       "type": "key figure",
       "ingredients": {
         "aggregateFunctions": [
-          "count"
+          "distinct-count"
         ],
         "valueColumns": [
           "#activity+id"
@@ -36,6 +38,11 @@
         ],
         "valueColumns":[
           "#activity+id"
+        ],
+        "filtersWithout": [
+          {
+            "#org+reporting+name": ""
+          }           
         ]
       }
     },
@@ -53,6 +60,55 @@
         ],
         "valueColumns": [
           "#activity+id"
+        ],
+        "filtersWithout": [
+          {
+            "#sector": ""
+          }           
+        ]
+      }
+    },
+    {
+      "title": "Most-active subsectors",
+      "name": "Most-active subsectors",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "distinct-count"
+        ],
+        "aggregateColumns": [
+          "#subsector"
+        ],
+        "valueColumns": [
+          "#activity+id"
+        ],
+        "filtersWithout": [
+          {
+            "#subsector": ""
+          }           
+        ]
+      }
+    },
+    {
+      "title": "Most-mentioned locations",
+      "name": "Most-mentioned locations",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "distinct-count"
+        ],
+        "aggregateColumns": [
+          "#loc+name"
+        ],
+        "valueColumns": [
+          "#activity+id"
+        ],
+        "filtersWithout": [
+          {
+            "#loc+name": ""
+          }           
         ]
       }
     }
