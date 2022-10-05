@@ -55,6 +55,40 @@
           "#activity+id"
         ]
       }
+    },
+    {
+      "title": "Most-active subsectors",
+      "name": "Most-active subsectors",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "distinct-count"
+        ],
+        "aggregateColumns": [
+          "#subsector+name"
+        ],
+        "valueColumns": [
+          "#activity+id"
+        ]
+      }
+    },
+    {
+      "title": "Most-mentioned locations",
+      "name": "Most-mentioned locations",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "distinct-count"
+        ],
+        "aggregateColumns": [
+          "#loc+name"
+        ],
+        "valueColumns": [
+          "#activity+id"
+        ]
+      }
     }
   ]
 }
