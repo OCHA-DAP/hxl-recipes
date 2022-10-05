@@ -5,6 +5,7 @@
   "columns": [
     "#activity+id",
     "#sector",
+    "#subsector",
     "#org+reporting+name",
     "#loc+name"
   ],
@@ -51,6 +52,23 @@
         ],
         "aggregateColumns": [
           "#sector"
+        ],
+        "valueColumns": [
+          "#activity+id"
+        ]
+      }
+    },
+    {
+      "title": "Most-active subsectors",
+      "name": "Most-active subsectors",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "distinct-count"
+        ],
+        "aggregateColumns": [
+          "#subsector"
         ],
         "valueColumns": [
           "#activity+id"
