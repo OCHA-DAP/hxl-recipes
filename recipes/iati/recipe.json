@@ -89,6 +89,9 @@
         ],
         "valueColumns": [
           "#activity+id"
+        ],
+        "filtersWithout": [
+          "#loc+name": ""
         ]
       }
     }
