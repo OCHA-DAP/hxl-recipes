@@ -91,7 +91,9 @@
           "#activity+id"
         ],
         "filtersWithout": [
-          "#loc+name": ""
+          {
+            "#loc+name": ""
+          }           
         ]
       }
     }
