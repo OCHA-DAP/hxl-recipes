@@ -1,0 +1,92 @@
+{
+  "name": "UNHCR",
+  "title": "UNHCR - forcibly displaced persons and stateless persons",
+  "type": "cookbook",
+  "columns": [
+    "#country+code+asylum",
+    "#country+code+origin",
+    "#country+name+asylum",
+    "#country+name+origin",
+    "#date",
+    "#affected+displaced+outgoing",
+    "#affected+displaced+stateless+incoming",
+    "#affected+displaced+stateless+outgoing"
+  ],
+  "recipes": [
+    {
+      "name": "People displaced across borders from Afghanistan",
+      "description": "Includes refugees, asylum-seekers and Venezuelans displaced abroad.",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#date+year"
+        ],
+        "valueColumns": [
+          "#affected+displaced+outgoing"
+        ],
+        "filtersWith": [
+          {
+            "#country+code+origin": "AFG"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Forcibly displaced and stateless persons within Afghanistan",
+      "description": "Includes refugees, asylum-seekers, internally displaced persons, Venezuelans displaced abroad and stateless persons.",
+      "type": "chart",
+      "options": {
+        "forcedChartType": "bar"
+      },
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#country+name+origin"
+        ],
+        "valueColumns": [
+          "#affected+displaced+stateless+incoming"
+        ],
+        "filtersWith": [
+          {
+            "#date+year": "$MAX$"
+          },
+          {
+            "#country+code+asylum": "AFG"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Forcibly displaced and stateless persons from Afghanistan",
+      "description": "Includes refugees, asylum-seekers, internally displaced persons, Venezuelans displaced abroad and stateless persons.",
+      "type": "chart",
+      "options": {
+        "forcedChartType": "bar"
+      },
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#country+name+asylum"
+        ],
+        "valueColumns": [
+          "#affected+displaced+stateless+outgoing"
+        ],
+        "filtersWith": [
+          {
+            "#date+year": "$MAX$"
+          },
+          {
+            "#country+code+origin": "AFG"
+          }
+        ]
+      }
+    }
+  ]
+}
