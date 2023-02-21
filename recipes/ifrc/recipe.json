@@ -26,11 +26,11 @@
         ],
         "filtersWith": [
           {
-            "#status": "0"
+            "#status": 0
           }
         ],        
         "valueColumns": [
-          "#value+funded / #value+requested"
+          "#value+requested / #value+funded"
         ]
       }
     }
