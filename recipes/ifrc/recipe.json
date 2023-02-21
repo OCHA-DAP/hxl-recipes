@@ -21,10 +21,8 @@
         "aggregateFunctions": [
           "sum"
         ],
-        "filtersWith": [
-          {
-            "#status": 0
-          }
+        "aggregateColumns": [
+          "#meta+appeal+id"
         ],
         "valueColumns": [
           "#value+funded / #value+requested"
