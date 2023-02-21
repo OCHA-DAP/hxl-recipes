@@ -1,0 +1,36 @@
+{
+  "name": "ifrc country appeals",
+  "title": "Country Appeals",
+  "type": "cookbook",
+  "columns": [
+    "#crisis+name",
+    "#meta+appeal+type",
+    "#status",
+    "#meta+appeal+id",
+    "#beneficiaries+num",
+    "#value+requested",
+    "#value+funded"
+  ],
+  "recipes": [
+    {
+      "name": "Requirements and Funding for Active Appeals",
+      "title": "Requirements and Funding for Active Appeals",
+      "description": "Stacked bar chart comparing requirements and funding for active appeals",
+      "type": "comparison-chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "filtersWith": [
+          {
+            "#status": "0"
+          }
+        ],
+        "valueColumns": [
+          "#value+funded / #value+requested"
+        ]
+      }
+    }
+  ]
+}
+
