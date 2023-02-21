@@ -65,7 +65,7 @@
     {
       "name": "Number of Beneficiaries of Appeals",
       "title": "Number of Beneficiaries of Appeals",
-      "description": "Bar chart showing number of beneficiaries of appeals",
+      "description": "Bar chart showing initial number of beneficiaries of appeals",
       "type": "chart",
       "options": {
         "forcedChartType": "bar"
