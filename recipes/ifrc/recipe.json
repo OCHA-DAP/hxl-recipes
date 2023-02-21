@@ -24,6 +24,11 @@
         "aggregateColumns": [
           "#meta+appeal+id"
         ],
+        "filtersWith": [
+          {
+            "#status": 0
+          }
+        ],        
         "valueColumns": [
           "#value+funded / #value+requested"
         ]
