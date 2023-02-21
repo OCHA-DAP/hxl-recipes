@@ -22,15 +22,16 @@
           "sum"
         ],
         "aggregateColumns": [
-          "#meta+appeal+id"
+          "#crisis+name"
         ],
         "filtersWith": [
           {
+            "#meta+appeal+type": 0,
             "#status": 0
           }
         ],        
         "valueColumns": [
-          "#value+requested / #value+funded"
+          "#value+funded / #value+requested"
         ]
       }
     }
