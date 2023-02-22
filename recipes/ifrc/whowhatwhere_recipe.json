@@ -21,7 +21,7 @@
           "distinct-count"
         ],
         "aggregateColumns": [
-          "#country+code"
+          "#sector+primary"
         ],
         "filtersWith": [
           {
@@ -29,7 +29,7 @@
           }
         ],
         "valueColumns": [
-          "#sector+primary"
+          "#country+code"
         ]
       }
     }
