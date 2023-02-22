@@ -6,7 +6,8 @@
     "#country+code",
     "#sector+primary",
     "#activity+type",
-    "#status"
+    "#status",
+    "#targeted+total"
   ],
   "recipes": [
     {
@@ -53,6 +54,25 @@
         ],
         "valueColumns": [
           "#country+code"
+        ]
+      }
+    },
+    {
+      "name": "Targeted Population",
+      "title": "Targeted Population",
+      "description": "",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum",
+        ],
+        "filtersWith": [
+          {
+            "#status": "Ongoing"
+          }
+        ],
+        "valueColumns": [
+          "#targeted+total"
         ]
       }
     }    
