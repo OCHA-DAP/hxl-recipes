@@ -64,7 +64,7 @@
       "type": "key figure",
       "ingredients": {
         "aggregateFunctions": [
-          "sum",
+          "sum"
         ],
         "filtersWith": [
           {
