@@ -5,7 +5,7 @@
   "columns": [
     "#country+code",
     "#sector+primary",
-    "#status",
+    "#status"
   ],
   "recipes": [
     {
