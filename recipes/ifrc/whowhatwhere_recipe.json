@@ -5,6 +5,7 @@
   "columns": [
     "#country+code",
     "#sector+primary",
+    "#activity+type",
     "#status"
   ],
   "recipes": [
@@ -32,7 +33,29 @@
           "#country+code"
         ]
       }
-    }
+    },
+    {
+      "name": "Programme Type",
+      "title": "Programme Type",
+      "description": "Pie chart showing number of projects for each programme type",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "count"
+        ],
+        "aggregateColumns": [
+          "#activity+type"
+        ],
+        "filtersWith": [
+          {
+            "#status": "Ongoing"
+          }
+        ],
+        "valueColumns": [
+          "#country+code"
+        ]
+      }
+    }    
   ]
 }
 
