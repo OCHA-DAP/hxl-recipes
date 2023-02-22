@@ -37,7 +37,7 @@
     {
       "name": "Programme Type",
       "title": "Programme Type",
-      "description": "Pie chart showing number of projects for each programme type",
+      "description": "Pie chart showing percentage of projects that fall under each programme type",
       "type": "chart",
       "ingredients": {
         "aggregateFunctions": [
