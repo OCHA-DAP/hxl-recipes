@@ -1,6 +1,6 @@
 {
-  "name": "ifrc country appeals",
-  "title": "Country Appeals",
+  "name": "ifrc appeals",
+  "title": "Appeals",
   "type": "cookbook",
   "columns": [
     "#crisis+name",

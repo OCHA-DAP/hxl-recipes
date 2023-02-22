@@ -1,0 +1,38 @@
+{
+  "name": "ifrc whowhatwhere",
+  "title": "Who What Where",
+  "type": "cookbook",
+  "columns": [
+    "#country+code",
+    "#sector+primary",
+    "#status",
+  ],
+  "recipes": [
+    {
+      "name": "Number of Projects per Sector",
+      "title": "Number of Projects per Sector",
+      "description": "Bar chart showing number of projects per sector",
+      "type": "chart",
+      "options": {
+        "forcedChartType": "bar"
+      },
+      "ingredients": {
+        "aggregateFunctions": [
+          "distinct-count"
+        ],
+        "aggregateColumns": [
+          "#country+code"
+        ],
+        "filtersWith": [
+          {
+            "#status": "Ongoing"
+          }
+        ],
+        "valueColumns": [
+          "#sector+primary"
+        ]
+      }
+    }
+  ]
+}
+
