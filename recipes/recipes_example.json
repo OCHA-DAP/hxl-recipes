@@ -39,7 +39,7 @@
         {
           "name": "Requirements and Funding for Latest Year",
           "title": "Requirements and Funding for Latest Year",
-          "description": "Stacked bar chart comparing requirements and funding for latest year",
+          "description": "Comparative bar chart comparing requirements and funding for latest year",
           "type": "comparison-chart",
           "ingredients": {
             "aggregateFunctions": [
@@ -59,7 +59,7 @@
         {
           "name": "Requirements and Funding by Year",
           "title": "Requirements and Funding by Year",
-          "description": "Stacked bar chart comparing requirements and funding by year",
+          "description": "Comparative bar chart comparing requirements and funding by year",
           "type": "comparison-chart",
           "ingredients": {
             "aggregateFunctions": [
@@ -76,7 +76,7 @@
         {
           "name": "Requirements and Funding by Cluster for Latest Year",
           "title": "Requirements and Funding by Cluster for Latest Year",
-          "description": "Stacked bar chart comparing requirements and funding by cluster for latest year",
+          "description": "Comparative bar chart comparing requirements and funding by cluster for latest year",
           "type": "comparison-chart",
           "ingredients": {
             "aggregateFunctions": [
@@ -133,7 +133,7 @@
         {
           "name": "Requirements and Funding for Latest Year",
           "title": "Requirements and Funding for Latest Year",
-          "description": "Stacked bar chart comparing requirements and funding for latest year",
+          "description": "Comparative bar chart comparing requirements and funding for latest year",
           "type": "comparison-chart",
           "ingredients": {
             "aggregateFunctions": [
@@ -153,7 +153,7 @@
         {
           "name": "Requirements and Funding by Year",
           "title": "Requirements and Funding by Year",
-          "description": "Stacked bar chart comparing requirements and funding by year",
+          "description": "Comparative bar chart comparing requirements and funding by year",
           "type": "comparison-chart",
           "ingredients": {
             "aggregateFunctions": [
@@ -170,7 +170,7 @@
         {
           "name": "Requirements and Funding by Cluster for Latest Year",
           "title": "Requirements and Funding by Cluster for Latest Year",
-          "description": "Stacked bar chart comparing requirements and funding by cluster for latest year",
+          "description": "Comparative bar chart comparing requirements and funding by cluster for latest year",
           "type": "comparison-chart",
           "ingredients": {
             "aggregateFunctions": [
