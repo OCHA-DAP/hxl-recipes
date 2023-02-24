@@ -15,7 +15,7 @@
     {
       "name": "Requirements and Funding for Active DREF Appeals",
       "title": "Requirements and Funding for Active DREF Appeals",
-      "description": "Stacked bar chart comparing requirements and funding for active Disaster Response Emergency Fund appeals",
+      "description": "Comparative bar chart comparing requirements and funding for active Disaster Response Emergency Fund appeals",
       "type": "comparison-chart",
       "ingredients": {
         "aggregateFunctions": [
@@ -40,7 +40,7 @@
     {
       "name": "Requirements and Funding for Active Emergency Appeals",
       "title": "Requirements and Funding for Active Emergency Appeals",
-      "description": "Stacked bar chart comparing requirements and funding for active emergency appeals",
+      "description": "Comparative bar chart comparing requirements and funding for active emergency appeals",
       "type": "comparison-chart",
       "ingredients": {
         "aggregateFunctions": [
