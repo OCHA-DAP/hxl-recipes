@@ -3,7 +3,7 @@
   "title": "Appeals",
   "type": "cookbook",
   "columns": [
-    "#cause+id",
+    "#meta+id",
     "#date+start+month",
     "#meta+year+rolling"
   ],
@@ -16,7 +16,7 @@
       "type": "timeseries",
       "ingredients": {
         "aggregateFunctions": [
-          "sum"
+          "count"
         ],
         "filtersWith": [
             {
@@ -27,7 +27,7 @@
           "#date+start+month"
         ],
         "valueColumns": [
-          "#cause+id"
+          "#meta+id"
         ]
       }
     }
