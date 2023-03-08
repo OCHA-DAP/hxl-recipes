@@ -3,14 +3,7 @@
   "title": "Appeals",
   "type": "cookbook",
   "columns": [
-    "#crisis+name",
-    "#meta+appeal+type",
-    "#status+code",
     "#meta+appeal+id",
-    "#beneficiaries+num",
-    "#value+requested",
-    "#value+funded",
-    "#date+start+year",
     "#date+start+month",
     "#meta+year+rolling"
   ],
