@@ -13,7 +13,7 @@
       "name": "DREF and Emergency Appeals over the Last Year",
       "title": "DREF and Emergency Appeals over the Last Year",
       "description": "Number of Disaster Response Emergency Fund and Emergency appeals per month over the past year",
-      "type": "timeseries",
+      "type": "chart",
       "ingredients": {
         "aggregateFunctions": [
           "count"
