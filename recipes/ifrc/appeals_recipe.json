@@ -9,31 +9,30 @@
     "#meta+appeal+id",
     "#beneficiaries+num",
     "#value+requested",
-    "#value+funded"
+    "#value+funded",
+    "#date+start+year",
+    "#date+start+yearmonth"
   ],
   "recipes": [
     {
-      "name": "Requirements and Funding for Active DREF Appeals",
-      "title": "Requirements and Funding for Active DREF Appeals",
-      "description": "Comparative bar chart comparing requirements and funding for active Disaster Response Emergency Fund appeals",
-      "type": "comparison-chart",
+      "name": "DREF and Emergency Appeals over the Last Year",
+      "title": "DREF and Emergency Appeals over the Last Year",
+      "description": "Number of Disaster Response Emergency Fund and Emergency appeals per month over the past year",
+      "type": "timeseries",
       "ingredients": {
         "aggregateFunctions": [
-          "sum"
+          "count"
         ],
         "aggregateColumns": [
-          "#meta+appeal+id"
+          "#date+yearmonth"
         ],
         "filtersWith": [
-          {
-            "#meta+appeal+type": 0
-          },
-          {
-            "#status": 0
-          }
-        ],        
+            {
+                "#date+start+year": "$MAX$"
+            }
+        ],
         "valueColumns": [
-          "#value+funded / #value+requested"
+          "#meta+appeal+id"
         ]
       }
     },
