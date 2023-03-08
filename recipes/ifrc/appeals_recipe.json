@@ -26,11 +26,6 @@
         "aggregateColumns": [
           "#date+start+yearmonth"
         ],
-        "filtersWith": [
-            {
-                "#date+start+year": "$MAX$"
-            }
-        ],
         "valueColumns": [
           "#meta+appeal+id"
         ]
