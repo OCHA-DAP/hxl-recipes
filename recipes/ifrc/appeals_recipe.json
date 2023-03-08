@@ -11,7 +11,8 @@
     "#value+requested",
     "#value+funded",
     "#date+start+year",
-    "#date+start+yearmonth"
+    "#date+start+month",
+    "#meta+year+rolling"
   ],
   "recipes": [
     {
@@ -24,7 +25,12 @@
           "count"
         ],
         "aggregateColumns": [
-          "#date+start+yearmonth"
+          "#date+start+month"
+        ],
+        "filtersWith": [
+            {
+                "#meta+year+rolling": "Y"
+            }
         ],
         "valueColumns": [
           "#meta+appeal+id"
