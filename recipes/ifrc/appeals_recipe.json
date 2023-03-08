@@ -7,6 +7,7 @@
     "#date+start+month",
     "#meta+year+rolling"
   ],
+  "noCachedMetarows": true,
   "recipes": [
     {
       "name": "DREF and Emergency Appeals over the Last Year",
