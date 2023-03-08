@@ -24,7 +24,7 @@
           "count"
         ],
         "aggregateColumns": [
-          "#date+yearmonth"
+          "#date+start+yearmonth"
         ],
         "filtersWith": [
             {
@@ -35,57 +35,7 @@
           "#meta+appeal+id"
         ]
       }
-    },
-    {
-      "name": "Requirements and Funding for Active Emergency Appeals",
-      "title": "Requirements and Funding for Active Emergency Appeals",
-      "description": "Comparative bar chart comparing requirements and funding for active emergency appeals",
-      "type": "comparison-chart",
-      "ingredients": {
-        "aggregateFunctions": [
-          "sum"
-        ],
-        "aggregateColumns": [
-          "#meta+appeal+id"
-        ],
-        "filtersWith": [
-          {
-            "#meta+appeal+type": 1
-          },
-          {
-            "#status": 0
-          }
-        ],        
-        "valueColumns": [
-          "#value+funded / #value+requested"
-        ]
-      }
-    },
-    {
-      "name": "Number of Beneficiaries of Appeals",
-      "title": "Number of Beneficiaries of Appeals",
-      "description": "Bar chart showing initial number of beneficiaries of appeals",
-      "type": "chart",
-      "options": {
-        "forcedChartType": "bar"
-      },      
-      "ingredients": {
-        "aggregateFunctions": [
-          "sum"
-        ],
-        "aggregateColumns": [
-          "#meta+appeal+id"
-        ],
-        "filtersWith": [
-          {
-            "#status": 0
-          }
-        ],        
-        "valueColumns": [
-          "#beneficiaries+num"
-        ]
-      }
-    }    
+    }
   ]
 }
 
