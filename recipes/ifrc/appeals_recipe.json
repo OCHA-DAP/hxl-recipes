@@ -27,7 +27,8 @@
           "#date+yearmonth"
         ],
         "valueColumns": [
-          "#indicator+appeal+dref+num"
+          "#indicator+appeal+dref+num",
+          "#indicator+appeal+emergency+num",          
         ]
       }
     }
