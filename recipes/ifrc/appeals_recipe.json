@@ -3,9 +3,9 @@
   "title": "Appeals",
   "type": "cookbook",
   "columns": [
-    "#meta+id",
-    "#date+start+month",
-    "#meta+year+rolling"
+    "#date+yearmonth",
+    "#meta+last_year",
+    "#indicator+appeal+dref+num"
   ],
   "noCachedMetarows": true,
   "recipes": [
@@ -13,21 +13,21 @@
       "name": "DREF and Emergency Appeals over the Last Year",
       "title": "DREF and Emergency Appeals over the Last Year",
       "description": "Number of Disaster Response Emergency Fund and Emergency appeals per month over the past year",
-      "type": "chart",
+      "type": "timeseries",
       "ingredients": {
         "aggregateFunctions": [
-          "count"
+          "sum"
         ],
         "filtersWith": [
             {
-                "#meta+year+rolling": "Y"
+                "#meta+last_year": "Y"
             }
         ],
         "aggregateColumns": [
-          "#date+start+month"
+          "#date+yearmonth"
         ],
         "valueColumns": [
-          "#meta+id"
+          "#indicator+appeal+dref+num"
         ]
       }
     }
