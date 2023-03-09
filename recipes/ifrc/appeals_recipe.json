@@ -28,7 +28,7 @@
         ],
         "valueColumns": [
           "#indicator+appeal+dref+num",
-          "#indicator+appeal+emergency+num",          
+          "#indicator+appeal+emergency+num"
         ]
       }
     }
