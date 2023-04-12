@@ -149,6 +149,9 @@
             "aggregateFunctions": [
               "sum"
             ],
+            "aggregateColumns": [
+              "#date+year"
+            ],
             "filtersWith": [
               {
                 "#date+year": "$MAX$"
