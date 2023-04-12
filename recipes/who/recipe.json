@@ -10,6 +10,29 @@
   ],
   "recipes": [
     {
+      "name": "Life Expectancy",
+      "title": "Life Expectancy at Birth",
+      "description": "Number of years of life expectancy at birth",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "filtersWith": [
+        {
+          "#indicator+code": "WHOSIS_000001"
+        }
+        ],
+        "aggregateColumns": [
+          "#date+year",
+          "#sex+name"
+        ],
+        "valueColumns": [
+          "#indicator+value+num"
+        ]
+      }
+    },
+    {
       "name": "Infant Mortality Rate",
       "title": "Infant Mortality Rate",
       "description": "Probability of dying between birth and age 1 per 1000 live births",
@@ -33,9 +56,9 @@
       }
     },
     {
-      "name": "Life Expectancy",
-      "title": "Life Expectancy at Birth",
-      "description": "",
+      "name": "Homicide Rate",
+      "title": "Homicide Rate",
+      "description": "Number of homicides per 100000 population",
       "type": "timeseries",
       "ingredients": {
         "aggregateFunctions": [
@@ -43,34 +66,12 @@
         ],
         "filtersWith": [
         {
-          "#indicator+code": "WHOSIS_000001"
+          "#indicator+code": "VIOLENCE_HOMICIDERATE"
         }
         ],
         "aggregateColumns": [
           "#date+year",
           "#sex+name"
-        ],
-        "valueColumns": [
-          "#indicator+value+num"
-        ]
-      }
-    },
-    {
-      "name": "Gov Health Expenditure",
-      "title": "Per Capita Government Health Expenditure",
-      "description": "Per capita government expenditure on health at average exchange rate",
-      "type": "timeseries",
-      "ingredients": {
-        "aggregateFunctions": [
-          "sum"
-        ],
-        "filtersWith": [
-        {
-          "#indicator+code": "WHS7_104"
-        }
-        ],
-        "aggregateColumns": [
-          "#date+year"
         ],
         "valueColumns": [
           "#indicator+value+num"
