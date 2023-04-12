@@ -6,6 +6,7 @@
     "#value+funding+total+usd",
     "#value+funding+required+usd",
     "#value+funding+pct",
+    "#sector+name",
     "#date+year"
   ],
   "recipes": [
