@@ -3,90 +3,37 @@
   "title": "Appeals",
   "type": "cookbook",
   "columns": [
-    "#crisis+name",
+    "#date+yearmonth",
+    "#meta+lastyear",
     "#meta+appeal+type",
-    "#status",
-    "#meta+appeal+id",
-    "#beneficiaries+num",
-    "#value+requested",
-    "#value+funded"
+    "#indicator+appeal+num"
   ],
+  "noCachedMetarows": true,
   "recipes": [
     {
-      "name": "Requirements and Funding for Active DREF Appeals",
-      "title": "Requirements and Funding for Active DREF Appeals",
-      "description": "Comparative bar chart comparing requirements and funding for active Disaster Response Emergency Fund appeals",
-      "type": "comparison-chart",
+      "name": "DREF and Emergency Appeals over the Last Year",
+      "title": "DREF and Emergency Appeals over the Last Year",
+      "description": "Number of Disaster Response Emergency Fund and Emergency appeals per month over the past year",
+      "type": "timeseries",
       "ingredients": {
         "aggregateFunctions": [
           "sum"
         ],
-        "aggregateColumns": [
-          "#meta+appeal+id"
-        ],
         "filtersWith": [
-          {
-            "#meta+appeal+type": 0
-          },
-          {
-            "#status": 0
-          }
-        ],        
-        "valueColumns": [
-          "#value+funded / #value+requested"
-        ]
-      }
-    },
-    {
-      "name": "Requirements and Funding for Active Emergency Appeals",
-      "title": "Requirements and Funding for Active Emergency Appeals",
-      "description": "Comparative bar chart comparing requirements and funding for active emergency appeals",
-      "type": "comparison-chart",
-      "ingredients": {
-        "aggregateFunctions": [
-          "sum"
+            {
+                "#meta+lastyear": "Y"
+            }
+        ],
+        "dateColumns": [
+          "#date+yearmonth"
         ],
         "aggregateColumns": [
-          "#meta+appeal+id"
+          "#meta+appeal+type"
         ],
-        "filtersWith": [
-          {
-            "#meta+appeal+type": 1
-          },
-          {
-            "#status": 0
-          }
-        ],        
         "valueColumns": [
-          "#value+funded / #value+requested"
+          "#indicator+appeal+num"
         ]
       }
-    },
-    {
-      "name": "Number of Beneficiaries of Appeals",
-      "title": "Number of Beneficiaries of Appeals",
-      "description": "Bar chart showing initial number of beneficiaries of appeals",
-      "type": "chart",
-      "options": {
-        "forcedChartType": "bar"
-      },      
-      "ingredients": {
-        "aggregateFunctions": [
-          "sum"
-        ],
-        "aggregateColumns": [
-          "#meta+appeal+id"
-        ],
-        "filtersWith": [
-          {
-            "#status": 0
-          }
-        ],        
-        "valueColumns": [
-          "#beneficiaries+num"
-        ]
-      }
-    }    
+    }
   ]
 }
-
