@@ -3,90 +3,125 @@
   "title": "Appeals",
   "type": "cookbook",
   "columns": [
-    "#crisis+name",
+    "#date+year",
+    "#date+yearmonth",
+    "#meta+lastyear",
     "#meta+appeal+type",
-    "#status",
-    "#meta+appeal+id",
-    "#beneficiaries+num",
-    "#value+requested",
-    "#value+funded"
+    "#indicator+appeal+num",
+    "#value+funding+total+chf",
+    "#beneficiaries+num"
   ],
+  "noCachedMetarows": true,
   "recipes": [
     {
-      "name": "Requirements and Funding for Active DREF Appeals",
-      "title": "Requirements and Funding for Active DREF Appeals",
-      "description": "Comparative bar chart comparing requirements and funding for active Disaster Response Emergency Fund appeals",
-      "type": "comparison-chart",
+      "name": "DREFs and Appeals over the Last Year",
+      "title": "DREFs and Appeals over the Last Year",
+      "description": "Number of Disaster Response Emergency Fund and Emergency Appeals per month over the past year",
+      "type": "timeseries",
       "ingredients": {
         "aggregateFunctions": [
           "sum"
         ],
-        "aggregateColumns": [
-          "#meta+appeal+id"
-        ],
         "filtersWith": [
-          {
-            "#meta+appeal+type": 0
-          },
-          {
-            "#status": 0
-          }
-        ],        
+            {
+                "#meta+lastyear": "Y"
+            }
+        ],
+        "dateColumns": [
+          "#date+yearmonth"
+        ],
+        "aggregateColumns": [
+          "#meta+appeal+type"
+        ],
         "valueColumns": [
-          "#value+funded / #value+requested"
+          "#indicator+appeal+num"
         ]
       }
     },
     {
-      "name": "Requirements and Funding for Active Emergency Appeals",
-      "title": "Requirements and Funding for Active Emergency Appeals",
-      "description": "Comparative bar chart comparing requirements and funding for active emergency appeals",
-      "type": "comparison-chart",
+      "name": "Funding over the Last Year",
+      "title": "Funding over the Last Year",
+      "description": "Funding in CHD for Disaster Response Emergency Fund and Emergency Appeals per month over the past year",
+      "type": "timeseries",
       "ingredients": {
         "aggregateFunctions": [
           "sum"
         ],
-        "aggregateColumns": [
-          "#meta+appeal+id"
-        ],
         "filtersWith": [
-          {
-            "#meta+appeal+type": 1
-          },
-          {
-            "#status": 0
-          }
-        ],        
+            {
+                "#meta+lastyear": "Y"
+            }
+        ],
+        "dateColumns": [
+          "#date+yearmonth"
+        ],
+        "aggregateColumns": [
+          "#meta+appeal+type"
+        ],
         "valueColumns": [
-          "#value+funded / #value+requested"
+          "#value+funding+total+chf"
         ]
       }
     },
     {
-      "name": "Number of Beneficiaries of Appeals",
-      "title": "Number of Beneficiaries of Appeals",
-      "description": "Bar chart showing initial number of beneficiaries of appeals",
-      "type": "chart",
-      "options": {
-        "forcedChartType": "bar"
-      },      
+      "name": "DREFs and Appeals by Year",
+      "title": "DREFs and Appeals by Year",
+      "description": "Number of Disaster Response Emergency Fund and Emergency Appeals per year",
+      "type": "timeseries",
       "ingredients": {
         "aggregateFunctions": [
           "sum"
         ],
-        "aggregateColumns": [
-          "#meta+appeal+id"
+        "dateColumns": [
+          "#date+year"
         ],
-        "filtersWith": [
-          {
-            "#status": 0
-          }
-        ],        
+        "aggregateColumns": [
+          "#meta+appeal+type"
+        ],
+        "valueColumns": [
+          "#indicator+appeal+num"
+        ]
+      }
+    },
+    {
+      "name": "Funding by Year",
+      "title": "Funding by Year",
+      "description": "Funding in CHD of Disaster Response Emergency Fund and Emergency Appeals per year",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "dateColumns": [
+          "#date+year"
+        ],
+        "aggregateColumns": [
+          "#meta+appeal+type"
+        ],
+        "valueColumns": [
+          "#value+funding+total+chf"
+        ]
+      }
+    },
+    {
+      "name": "Initial Beneficiaries by Year",
+      "title": "Initial Beneficiaries by Year",
+      "description": "Initial Beneficiaries of Disaster Response Emergency Fund and Emergency Appeals per year",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "dateColumns": [
+          "#date+year"
+        ],
+        "aggregateColumns": [
+          "#meta+appeal+type"
+        ],
         "valueColumns": [
           "#beneficiaries+num"
         ]
       }
-    }    
+    }
   ]
 }
-
