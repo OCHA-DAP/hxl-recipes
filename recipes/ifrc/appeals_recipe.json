@@ -40,7 +40,7 @@
     {
       "name": "Funding over the Last Year",
       "title": "Funding over the Last Year",
-      "description": "Funding for Disaster Response Emergency Fund and Emergency Appeals per month over the past year",
+      "description": "Funding in CHF for Disaster Response Emergency Fund and Emergency Appeals per month over the past year",
       "type": "timeseries",
       "ingredients": {
         "aggregateFunctions": [
