@@ -33,6 +33,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: recipes/*
+          publish_dir: recipe*
           publish_branch: stag
           keep_files: true
