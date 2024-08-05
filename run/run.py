@@ -9,9 +9,13 @@ def _write_to_file(data, filename):
 
 
 def _read_from_file(filename):
-    with open(filename) as f_in:
-        orgs = (json.load(f_in))
-    return orgs
+    try:
+        with open(filename) as f_in:
+            orgs = (json.load(f_in))
+        return orgs
+    except FileNotFoundError:
+        print(f"Error: The file '{filename}' does not exist, skipping folder.")
+        return None
 
 
 def _list_folders(path="."):
@@ -27,7 +31,8 @@ def _build_recipe_file(folders_list: None):
         files = []
         for dir in folders_list:
             file = _read_from_file(dir.path + '/recipe.json')
-            files.append(file)
+            if file: 
+                files.append(file)
         cookbook = {
             "name": "HDX curated cookbooks",
             "title": "HDX curated cookbooks",
