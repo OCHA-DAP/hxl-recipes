@@ -21,9 +21,7 @@ jobs:
         run: ls -l recipes/*json
 
       - name: Run script
-        run: |
-          cd run
-          python3 run.py
+        run: cd run; python3 run.py
 
       - name: Copy index.html
         run: cp run/index.html recipes/
