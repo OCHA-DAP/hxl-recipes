@@ -27,12 +27,12 @@ jobs:
         run: cp run/index.html recipes/
 
       - name: Debug
-        run: ls -l recipes/*
+        run: ls -l recipes/*; pwd
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: recipes
+          publish_dir: ./recipes
           publish_branch: stag
           keep_files: true
