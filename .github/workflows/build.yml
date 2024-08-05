@@ -35,5 +35,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: recipes/*
           publish_branch: stag
-          exclude_assets: '.nojekyll'
           keep_files: true
