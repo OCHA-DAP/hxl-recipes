@@ -33,7 +33,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: recipes/*
           publish_branch: stag
           exclude_assets: '.nojekyll'
           keep_files: true
