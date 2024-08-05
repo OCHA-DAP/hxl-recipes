@@ -1,0 +1,81 @@
+{
+  "name": "ifrc whowhatwhere",
+  "title": "Who What Where",
+  "type": "cookbook",
+  "columns": [
+    "#country+code",
+    "#sector+primary",
+    "#activity+type",
+    "#status",
+    "#targeted+total"
+  ],
+  "recipes": [
+    {
+      "name": "Number of Projects per Sector",
+      "title": "Number of Projects per Sector",
+      "description": "Bar chart showing number of projects per sector",
+      "type": "chart",
+      "options": {
+        "forcedChartType": "bar"
+      },
+      "ingredients": {
+        "aggregateFunctions": [
+          "count"
+        ],
+        "aggregateColumns": [
+          "#sector+primary"
+        ],
+        "filtersWith": [
+          {
+            "#status": "Ongoing"
+          }
+        ],
+        "valueColumns": [
+          "#country+code"
+        ]
+      }
+    },
+    {
+      "name": "Programme Type",
+      "title": "Programme Type",
+      "description": "Pie chart showing percentage of projects that fall under each programme type",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "count"
+        ],
+        "aggregateColumns": [
+          "#activity+type"
+        ],
+        "filtersWith": [
+          {
+            "#status": "Ongoing"
+          }
+        ],
+        "valueColumns": [
+          "#country+code"
+        ]
+      }
+    },
+    {
+      "name": "Targeted Population",
+      "title": "Targeted Population",
+      "description": "",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "filtersWith": [
+          {
+            "#status": "Ongoing"
+          }
+        ],
+        "valueColumns": [
+          "#targeted+total"
+        ]
+      }
+    }    
+  ]
+}
+
