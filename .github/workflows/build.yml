@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - dev
+      
+permissions:
+  contents: write  # Needed to push changes
+  id-token: write  # Needed for identity token (OIDC)
 
 jobs:
   build:
