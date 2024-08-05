@@ -26,6 +26,9 @@ jobs:
       - name: Copy index.html
         run: cp run/index.html recipes/
 
+      - name: Debug
+        run: ls -l recipes/*
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
