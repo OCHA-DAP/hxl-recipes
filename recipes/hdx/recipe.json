@@ -1,0 +1,155 @@
+{
+  "name": "generic",
+  "title": "Generic",
+  "type": "cookbook",
+  "default": true,
+  "columns": [
+    "#affected",
+    "#inneed",
+    "#reached",
+    "#targeted",
+    "#population",
+    "#country",
+    "#adm1",
+    "#adm2",
+    "#adm3",
+    "#adm4",
+    "#adm5",
+    "#date+year",
+    "#date+month",
+    "#date+week",
+    "#region",
+    "#loc",
+    "#org",
+    "#sector",
+    "#indicator",
+    "#value",
+    "#activity",
+    "#item"
+  ],
+  "recipes": [
+    {
+      "name": "Charts: Sum/count items for a value column grouped by aggregate columns",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum",
+          "count"
+        ],
+        "aggregateColumns": [
+          "#country",
+          "#adm1",
+          "#adm2",
+          "#adm3",
+          "#adm4",
+          "#adm5",
+          "#region",
+          "#loc",
+          "#org",
+          "#sector",
+          "#indicator"
+        ],
+        "valueColumns": [
+          "#affected",
+          "#inneed",
+          "#reached",
+          "#targeted",
+          "#population",
+          "#indicator",
+          "#value",
+          "#activity"
+        ]
+      }
+    },
+    {
+      "name": "Charts: Distinct count of values in value column by the aggregate column",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "distinct-count"
+        ],
+        "aggregateColumns": [
+          "#country"
+        ],
+        "valueColumns": [
+          "#adm1"
+        ]
+      }
+    },
+    {
+      "name": "Charts: Sum items for a tag grouped by administrative units",
+      "description": "",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum",
+          "count"
+        ],
+        "aggregateColumns": [
+          "#date",
+          "#country",
+          "#adm1",
+          "#adm2",
+          "#adm3",
+          "#adm4",
+          "#adm5",
+          "#loc",
+          "#org",
+          "#sector"
+        ],
+        "valueColumns": [
+          "#affected",
+          "#inneed",
+          "#reached",
+          "#targeted",
+          "#population",
+          "#indicator",
+          "#value",
+          "#activity"
+        ]
+      }
+    },
+    {
+      "name": "Key Figures: Sum/count items for a value column",
+      "description": "",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum",
+          "count"
+        ],
+        "valueColumns": [
+          "#affected",
+          "#inneed",
+          "#reached",
+          "#targeted",
+          "#population",
+          "#indicator",
+          "#value",
+          "#activity"
+        ]
+      }
+    },
+    {
+      "name": "Key Figures: Distinct count of values in value column",
+      "description": "",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "distinct-count"
+        ],
+        "valueColumns": [
+          "#country",
+          "#adm1",
+          "#indicator",
+          "#org",
+          "#sector",
+          "#item"
+        ]
+      }
+    }
+  ]
+}
+

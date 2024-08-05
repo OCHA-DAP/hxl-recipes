@@ -1,0 +1,105 @@
+{
+  "name": "insecurity-insight",
+  "title": "Insecurity Insight",
+  "type": "cookbook",
+  "default": false,
+  "columns": [
+    "#date",
+    "#event",
+    "#affected"
+  ],
+  "recipes": [
+    {
+      "name": "Key figure: events (all types)",
+      "description": "Total number of events, including those related to the global COVID-19 pandemic and to civil conflict.",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "count"
+        ]
+      }
+    },
+    {
+      "name": "Key figure: events related to COVID-19",
+      "description": "Total number of events related to the global COVID-19 pandemic.",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "count"
+        ],
+        "filtersWith": [
+          {
+            "#event+type+covid19": "COVIDEvent"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Key figure: events related to conflict",
+      "description": "Total number of events related to civil conflict.",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "count"
+        ],
+        "filtersWith": [
+          {
+            "#event+type+conflict": "ConflictEvent"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Chart: events (all causes)",
+      "description": "Total number of events related to both the global COVID-19 pandemic and civil conflict.",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "count"
+        ],
+        "aggregateColumns": [
+          "#date",
+          "#country"
+        ]
+      }
+    },
+    {
+      "name": "Chart: events related to COVID-19",
+      "description": "Total number of events related to the global COVID-19 pandemic.",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "count"
+        ],
+        "aggregateColumns": [
+          "#date",
+          "#country"
+        ],
+        "filtersWith": [
+          {
+            "#event+type+covid19": "COVIDEvent"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Chart: events related to conflict",
+      "description": "Total number of events related to civil conflict.",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "count"
+        ],
+        "aggregateColumns": [
+          "#date",
+          "#country"
+        ],
+        "filtersWith": [
+          {
+            "#event+type+conflict": "ConflictEvent"
+          }
+        ]
+      }
+    }
+  ]
+}

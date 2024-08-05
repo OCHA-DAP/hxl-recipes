@@ -1,0 +1,101 @@
+{
+  "name": "genericyear",
+  "title": "genericyear",
+  "type": "cookbook",
+  "columns": [
+    "#affected",
+    "#inneed",
+    "#reached",
+    "#targeted",
+    "#population",
+    "#region",
+    "#country",
+    "#adm1",
+    "#date+year"
+  ],
+  "recipes": [
+    {
+      "name": "Key Figures: Sum/count items for a value column for latest year",
+      "description": "",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum",
+          "count"
+        ],
+        "filtersWith": [
+          {
+            "#date+year": "$MAX$"
+          }
+        ],
+        "valueColumns": [
+          "#affected",
+          "#inneed",
+          "#reached",
+          "#targeted",
+          "#population"          
+        ]
+      }
+    },    
+    {
+      "name": "Charts: Sum/count items for a value column for each year",
+      "description": "",
+      "type": "chart",
+      "options": {
+        "forcedChartType": "bar"
+      },
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum",
+          "count"
+        ],
+        "aggregateColumns": [
+          "#date+year"
+        ],
+        "valueColumns": [
+          "#affected",
+          "#inneed",
+          "#reached",
+          "#targeted",
+          "#population"          
+        ]
+      }
+    },
+    {
+      "name": "Charts: Sum/count items for a value column grouped by adm1 for latest year",
+      "description": "",
+      "type": "chart",
+      "options": {
+        "forcedChartType": "bar"
+      },
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum",
+          "count"
+        ],
+        "aggregateColumns": [
+          "#region",
+          "#country",
+          "#adm1"
+        ],
+        "filtersWith": [
+          {
+            "#date+year": "$MAX$"
+          }
+        ],
+        "filtersWithout": [
+          {
+            "#adm1": ""
+          }
+        ],        
+        "valueColumns": [
+          "#affected",
+          "#inneed",
+          "#reached",
+          "#targeted",
+          "#population"          
+        ]
+      }
+    }    
+  ]
+}

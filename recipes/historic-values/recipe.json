@@ -1,0 +1,31 @@
+{
+  "name": "historicfoodprices",
+  "title": "Historic Food Prices",
+  "type": "cookbook",
+  "columns": [
+    "#date",
+    "#item+name+short",
+    "#item+type",
+    "#value"
+  ],
+  "recipes": [
+    {
+      "name": "prices for commodities",
+      "description": "Prices of food commodities. Median prices across various markets are shown.",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#item+name+short",
+          "#item+type",
+          "#date"
+        ],
+        "valueColumns": [
+          "#value"
+        ]
+      }
+    }
+  ]
+}

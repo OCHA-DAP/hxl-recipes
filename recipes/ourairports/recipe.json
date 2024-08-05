@@ -1,0 +1,126 @@
+{
+  "name": "ourairports",
+  "title": "Our Airports",
+  "type": "cookbook",
+  "columns": [
+    "#loc+airport+type",
+    "#country+code+iso2",
+    "#meta+code",
+    "#adm1"
+  ],
+  "recipes": [
+    {
+      "name": "Active facilities",
+      "title": "Total active aviation facilities",
+      "description": "Active airports, heliports, and seaplane bases (with or without airline service).",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "count"
+        ],
+        "valueColumns": [
+          "#meta+code"
+        ],
+        "filtersWithout": [
+          {
+            "#loc+airport+type": "closed"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Airports with airline service",
+      "title": "Airports with airline service",
+      "description": "Airports with scheduled airline service only.",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "count"
+        ],
+        "valueColumns": [
+          "#meta+code"
+        ],
+        "filtersWith": [
+          {
+            "#status+scheduled": "1"
+          }
+        ],
+        "filtersWithout": [
+          {
+            "#loc+airport+type": "closed"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Active aviation facilities by admin1",
+      "title": "Active facilities by admin1",
+      "description": "Airports, heliports, and seaplane bases (with or without scheduled airline service).",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "count"
+        ],
+        "aggregateColumns": [
+          "#adm1+name"
+        ],
+        "valueColumns": [
+          "#meta+code"
+        ],
+        "filtersWithout": [
+          {
+            "#loc+airport+type": "closed"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Airports with airline service by admin1",
+      "title": "Airports with airline service by admin1 ",
+      "description": "Airports with airline service only.",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "count"
+        ],
+        "aggregateColumns": [
+          "#adm1+name"
+        ],
+        "valueColumns": [
+          "#meta+code"
+        ],
+        "filtersWith": [
+          {
+            "#status+scheduled": "1"
+          }
+        ],
+        "filtersWithout": [
+          {
+            "#loc+airport+type": "closed"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Active facilities by type",
+      "title": "Active facilities by type",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "count"
+        ],
+        "aggregateColumns": [
+          "#loc+airport+type"
+        ],
+        "valueColumns": [
+          "#country+code+iso2"
+        ],
+        "filtersWithout": [
+          {
+            "#loc+airport+type": "closed"
+          }
+        ]
+      }
+    }
+  ]
+}

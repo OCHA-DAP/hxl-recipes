@@ -1,0 +1,104 @@
+{
+  "name": "3w",
+  "title": "Who is doing What Where",
+  "type": "cookbook",
+  "columns": [
+    "#org",
+    "#activity",
+    "#sector",
+    "#subsector",
+    "#region",
+    "#country",
+    "#adm1",
+    "#adm2",
+    "#adm3",
+    "#adm4",
+    "#adm5"
+  ],
+  "recipes": [
+    {
+      "name": "Charts: Count items for a value column grouped by aggregate columns",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "count"
+        ],
+        "aggregateColumns": [
+          "#region",
+          "#country",
+          "#adm1",
+          "#adm2",
+          "#adm3",
+          "#adm4",
+          "#adm5",
+          "#org",
+          "#activity",
+          "#sector",
+          "#subsector"
+        ]
+      }
+    },
+    {
+      "name": "Charts: Distinct count of values in value column by the aggregate column",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "distinct-count"
+        ],
+        "aggregateColumns": [
+          "#region",
+          "#country",
+          "#adm1",
+          "#adm2",
+          "#adm3",
+          "#adm4",
+          "#adm5"
+        ],
+        "valueColumns": [
+          "#org",
+          "#activity",
+          "#sector",
+          "#subsector"
+        ]
+      }
+    },
+    {
+      "name": "Charts: Distinct count of values in value column by the aggregate column",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "distinct-count"
+        ],
+        "aggregateColumns": [
+          "#org"
+        ],
+        "valueColumns": [
+          "#activity",
+          "#sector",
+          "#subsector"
+        ]
+      }
+    },
+    {
+      "name": "Charts: Distinct count of values in value column by the aggregate column",
+      "description": "",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "distinct-count"
+        ],
+        "aggregateColumns": [
+          "#activity",
+          "#sector",
+          "#subsector"
+        ],
+        "valueColumns": [
+          "#org"
+        ]
+      }
+    }
+  ]
+}
