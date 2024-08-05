@@ -6,6 +6,7 @@
     "#value+funding+total+usd",
     "#value+funding+required+usd",
     "#value+funding+pct",
+    "#sector+name",
     "#date+year"
   ],
   "recipes": [
@@ -34,11 +35,14 @@
     {
       "name": "Requirements and Funding for Latest Year",
       "title": "Requirements and Funding for Latest Year",
-      "description": "Stacked bar chart comparing requirements and funding for latest year",
+      "description": "Comparative bar chart comparing requirements and funding for latest year",
       "type": "comparison-chart",
       "ingredients": {
         "aggregateFunctions": [
           "sum"
+        ],
+        "aggregateColumns": [
+          "#date+year"
         ],
         "filtersWith": [
           {
@@ -53,7 +57,7 @@
     {
       "name": "Requirements and Funding by Year",
       "title": "Requirements and Funding by Year",
-      "description": "Stacked bar chart comparing requirements and funding by year",
+      "description": "Comparative bar chart comparing requirements and funding by year",
       "type": "comparison-chart",
       "ingredients": {
         "aggregateFunctions": [
@@ -70,7 +74,7 @@
     {
       "name": "Requirements and Funding by Cluster for Latest Year",
       "title": "Requirements and Funding by Cluster for Latest Year",
-      "description": "Stacked bar chart comparing requirements and funding by cluster for latest year",
+      "description": "Comparative bar chart comparing requirements and funding by cluster for latest year",
       "type": "comparison-chart",
       "ingredients": {
         "aggregateFunctions": [

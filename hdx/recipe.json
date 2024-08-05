@@ -47,7 +47,8 @@
           "#region",
           "#loc",
           "#org",
-          "#sector"
+          "#sector",
+          "#indicator"
         ],
         "valueColumns": [
           "#affected",
