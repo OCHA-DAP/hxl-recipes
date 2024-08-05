@@ -35,4 +35,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./recipes
           publish_branch: stag
-          keep_files: true
+          exclude_assets: ''
