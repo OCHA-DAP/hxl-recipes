@@ -1,0 +1,38 @@
+name: HXL Recipes
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.6'
+
+      - name: List JSON files
+        run: ls -l recipes/*json
+
+      - name: Run script
+        run: |
+          cd run
+          python3 run.py
+
+      - name: Copy index.html
+        run: cp run/index.html recipes/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: recipes
+          publish_branch: stag
+          keep_files: true
+          verbose: true
